@@ -46,9 +46,14 @@
                     <button type="submit" class="btn btn-danger">esci</button>
                 </form>
               </li>
+            </ul>
+        </li>
+        <li>
+            <a class="btn btn-primary" href="{{route('announcement.create')}}">Inserisci Annuncio</a>
+        </li>
 
-          @endguest
-        </ul>
+
+        @endguest
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
