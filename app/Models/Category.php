@@ -9,4 +9,8 @@ class Category extends Model
 {
     protected $fillable=['name'];
     use HasFactory;
+
+    public function announcements(){
+        return $this->hasMany(Announcement::class);
+    }
 }
