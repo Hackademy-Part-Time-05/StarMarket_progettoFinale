@@ -13,7 +13,8 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        //
+       $announcements=Announcement::paginate(10);
+       return view('announcement.index', compact('announcements'));
     }
 
     /**
@@ -38,7 +39,7 @@ class AnnouncementController extends Controller
      */
     public function show(Announcement $announcement)
     {
-        //
+       return view('announcement.show', compact('announcement'));
     }
 
     /**

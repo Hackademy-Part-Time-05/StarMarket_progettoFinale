@@ -26,9 +26,9 @@
              
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="{{route('announcement.index')}}">Annunci</a>
+        </li>
           @guest
           <li class="nav-item">
               <a class="nav-link" href="{{route('login')}}">accedi</a>
@@ -54,6 +54,8 @@
         <li>
             <a class="btn btn-primary" href="{{route('announcement.create')}}">Inserisci Annuncio</a>
         </li>
+
+    
 
 
         @endguest

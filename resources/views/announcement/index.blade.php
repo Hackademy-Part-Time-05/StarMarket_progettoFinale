@@ -20,6 +20,7 @@
                           </div>
                     </div>
                     @endforeach
+                    {{$announcements->links()}}
                 </div>
             </div>
         </div>
