@@ -13,14 +13,17 @@
             <a class="nav-link" href="#">Link</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+            <a class="nav-link dropdown-toggle" id="categoriesDropdown"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+              @foreach ( $categories as $category)
+              <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+            
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              @endforeach
+             
+             
             </ul>
           </li>
           <li class="nav-item">
