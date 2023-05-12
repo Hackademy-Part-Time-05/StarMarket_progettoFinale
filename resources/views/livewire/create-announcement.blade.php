@@ -29,14 +29,14 @@
                     @foreach ($categories as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
-                        @error('category') <span class="small text-danger">{{$message}}</span>@enderror
+                       
                     </select>
-              
+                    @error('category') <span class="small text-danger">{{$message}}</span>@enderror
             </div>
         
         
             <div class="mt-3">
-                <button class="btn btn-primary" type="submit">Invia</button>
+                <button class="btn btn-warning" type="submit">Pubblica</button>
             </div>
            </form>
         </div>

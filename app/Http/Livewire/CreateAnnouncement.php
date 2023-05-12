@@ -33,6 +33,7 @@ class CreateAnnouncement extends Component
     }
     public function submit()
     {
+        $this->validate();
         $category = Category::find($this->category);
         $announcement = $category->announcements()->create([
             'title' => $this->title,
