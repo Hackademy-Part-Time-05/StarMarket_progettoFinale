@@ -12,11 +12,11 @@
                             <div class="card-body">
                               <h5 class="card-title">{{$announcement->title}}</h5>
                               <p class="card-text">{{$announcement->body}}</p>
-                              <p class="card-text">{{$announcement->price}}</p>
+                              <p class="card-text">Prezzo: {{$announcement->price}}€</p>
                               <a href="#" class="btn btn-primary">Visualizza</a>
-                              <a href="#" class="btn btn-primary">Categoria:{{$announcement->category->name}}</a>
-                              <p class="card-footer">Publicato il :{{$announcement->created_at->format('d/m/y')}}
-                               -autore:{{$announcement->user->name ?? ''}}</p>
+                              <a href="#" class="btn btn-primary">Categoria: {{$announcement->category->name}}</a>
+                              <p class="card-footer">Publicato il :{{$announcement->created_at->format('d/m/y')}} <br>
+                               Autore: {{$announcement->user->name ?? ''}}</p>
                             </div>
                           </div>
                     </div>
