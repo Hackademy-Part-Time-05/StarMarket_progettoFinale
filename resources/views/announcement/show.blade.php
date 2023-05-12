@@ -32,9 +32,9 @@
                     <h5 class="card-title">{{$announcement->title}}</h5>
                     <p class="card-text">{{$announcement->body}}</p>
                     <p class="card-text">{{$announcement->price}}</p>
-                    <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-primary">Visualizza</a>
-                    <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="btn btn-primary">Categoria:{{$announcement->category->name}}</a>
-                    <p class="card-footer">Publicato il :{{$announcement->created_at->format('d/m/y')}}</p>
+                    <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-warning">Visualizza</a>
+                    <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="btn btn-warning">Categoria: {{$announcement->category->name}}</a>
+                    <p class="card-footer bg-white">Pubblicato il: {{$announcement->created_at->format('d/m/y')}}</p>
                   </div>
             </div>
         </div>

@@ -22,19 +22,21 @@
         
             <div>
                 <label for="category"></label>
-                <select wire:model.defer="category" id="category" class="form-control">
+                <select wire:model.defer="category" id="category" name="category" class="form-control">
                     <option value="">
                         Scegli categoria
                     </option>
                     @foreach ($categories as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
-                </select>
+                        @error('category') <span class="small text-danger">{{$message}}</span>@enderror
+                    </select>
+              
             </div>
         
         
             <div class="mt-3">
-                <button class="btn btn-primary" type="submit">invia</button>
+                <button class="btn btn-primary" type="submit">Invia</button>
             </div>
            </form>
         </div>

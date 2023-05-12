@@ -22,7 +22,7 @@ class CreateAnnouncement extends Component
 
     ];
     protected $messages=[
-        'required'=>'è richiesto un nome :attribute',
+        'required'=>'è richiesto un :attribute',
         'max'=>'troppo lungo ',
         'min'=>'troppo corto ',
         'numeric'=>'occhio inserisci un numero',
@@ -37,7 +37,6 @@ class CreateAnnouncement extends Component
         $announcement = $category->announcements()->create([
             'title' => $this->title,
             'body' => $this->body,
-           
             'price'=> $this->price,
         ]);
         Auth::user()->announcements()->save($announcement);

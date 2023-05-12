@@ -13,9 +13,9 @@
                               <h5 class="card-title">{{$announcement->title}}</h5>
                               <p class="card-text">{{$announcement->body}}</p>
                               <p class="card-text">Prezzo: {{$announcement->price}}€</p>
-                              <a href="#" class="btn btn-primary">Visualizza</a>
-                              <a href="#" class="btn btn-primary">Categoria: {{$announcement->category->name}}</a>
-                              <p class="card-footer">Publicato il :{{$announcement->created_at->format('d/m/y')}} <br>
+                              <a href="#" class="btn btn-warning">Visualizza</a>
+                              <a href="#" class="btn btn-warning">Categoria: {{$announcement->category->name}}</a>
+                              <p class="card-footer bg-white">Pubblicato il: {{$announcement->created_at->format('d/m/y')}} <br>
                                Autore: {{$announcement->user->name ?? ''}}</p>
                             </div>
                           </div>

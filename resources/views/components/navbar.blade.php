@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg mb-5 bg-dark">
+<nav class="navbar navbar-expand-lg mb-5 bg-dark navbar-dark">
     <div class="container-fluid p-0 mx-4">
-      <a class="navbar-brand bounce-top" href="{{route('welcome')}}"><img class="logo-dim" src="{{asset('media/NERD_Logo_-_Original2_-_5000x5000.png')}}" alt=""></a>
+      <a class="navbar-brand bounce-top" href="{{route('welcome')}}"><img class="logo-dim" src="{{asset('media/logo.png')}}" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -53,12 +53,12 @@
             </ul>
         </li>
         <li>
-            <a class="btn btn-primary mb-lg-0 mb-2" href="{{route('announcement.create')}}">Inserisci Annuncio</a>
+            <a class="btn btn-warning mb-lg-0 mb-2 me-2" href="{{route('announcement.create')}}">Inserisci Annuncio</a>
         </li>
         @endguest
         <form class="d-flex" role="search">
           <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-warning" type="submit">Search</button>
         </form>
       </div>
     </div>
