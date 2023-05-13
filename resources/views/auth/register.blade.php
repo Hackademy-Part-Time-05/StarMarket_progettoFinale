@@ -27,7 +27,7 @@
                         
                         </div>
                         <div>
-                            <button type="submit" class="btn btn-success">Registrati</button>
+                            <button type="submit" class="btn btn-warning">Registrati</button>
                         </div>
                     </div>
                 </form>

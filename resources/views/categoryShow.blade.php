@@ -2,7 +2,6 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Presto.it</h1>
                 <p class="h2 my-2 fw-bold">Ecco i nostri annunci</p>
                 <div class="row">
                     @forelse ( $category->announcements as $announcement)
@@ -22,8 +21,8 @@
                     </div>
                     @empty
                     <div class="col-12">
-                        <p class="h1">Non ci sono annunci per questa categoria</p>
-                        <p class= "h2">Pubblicane uno: <a href="{{route ('announcement.create')}}"class="btn-warning btn shadow"> Nuovo Annuncio</a></p>
+                        <p class="h4">Non ci sono annunci per questa categoria</p>
+                        <p class= "h4">Pubblicane uno: <a href="{{route ('announcement.create')}}"class="btn-warning btn shadow"> Nuovo Annuncio</a></p>
                     </div>
                     @endforelse
                 </div>
