@@ -29,10 +29,10 @@
         </li>
           @guest
           <li class="nav-item">
-              <a class="nav-link" href="{{route('login')}}">accedi</a>
+              <a class="nav-link" href="{{route('login')}}">Accedi</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="{{route('register')}}">registrati</a>
+              <a class="nav-link" href="{{route('register')}}">Registrati</a>
           </li>
           @else 
 
@@ -46,7 +46,7 @@
                     @csrf
                     <div class="d-flex justify-content-center">
 
-                      <button type="submit" class="w-50 btn btn-danger">esci</button>
+                      <button type="submit" class="w-50 btn btn-danger">Esci</button>
                     </div>
                 </form>
               </li>
@@ -57,8 +57,8 @@
         </li>
         @endguest
         <form class="d-flex" role="search">
-          <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-warning" type="submit">Search</button>
+          <input class="form-control me-2 " type="search" placeholder="Che la ricerca sia con te" aria-label="Search">
+          <button class="btn btn-warning" type="submit">Ricerca</button>
         </form>
       </div>
     </div>
