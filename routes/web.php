@@ -4,6 +4,7 @@ use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\FrontController;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,13 @@ Route::get('announcements',[AnnouncementController::class,'create'])->name('anno
 Route::get('/categoria/{category}',[FrontController::class, 'categoryShow'])->name('categoryShow');
 Route::get('announcements/{announcement}',[AnnouncementController::class,'show'])->name('announcement.show');
 Route::get('/tutti/annunci',[AnnouncementController::class,'index'])->name('announcement.index');
+
+// Home revisore
+Route::get('/revisor/home',[RevisorController::class, 'index'])->name('revisor.index');
+
+// Accetta annuncio
+Route::patch('/accetta/annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
+
+// Rifiuta annuncio
+Route::patch('/rifiuta/annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
+
