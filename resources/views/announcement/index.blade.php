@@ -4,7 +4,7 @@
             <div class="col-12">
                 <p class="h2 my-2 fw-bold">Ecco i nostri annunci</p>
                 <div class="row">
-                    @foreach ($announcements as $announcement)
+                    @forelse ($announcements as $announcement)
                     <div class="col-12 col-md-6 col-lg-4 my-4">
                         <div class="card mx-auto shadow-mrk" style="width: 18rem;">
                             <img src="https://picsum.photos/200" class="card-img-top" alt="...">
@@ -18,7 +18,13 @@
                             </div>
                           </div>
                     </div>
-                    @endforeach
+                    @empty
+                    <div class="col-12">
+                        <div class="alert alert-warning py-3 shadow">
+                            <p class="lead">Non ci sono annunci per questa ricerca. Prova a passare al lato oscuro</p>
+                        </div>
+                    </div>
+                    @endforelse
                     {{$announcements->links()}}
                 </div>
             </div>

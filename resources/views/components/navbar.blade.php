@@ -78,8 +78,8 @@
                         </li>
                     @endif
                 @endguest
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2 " type="search" placeholder="Che la ricerca sia con te"
+                <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+                    <input class="form-control me-2 " name="searched" type="search" placeholder="Che la ricerca sia con te"
                         aria-label="Search">
                     <button class="btn btn-warning" type="submit">Ricerca</button>
                 </form>
