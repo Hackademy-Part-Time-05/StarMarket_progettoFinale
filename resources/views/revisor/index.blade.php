@@ -1,12 +1,20 @@
 <x-main>
     <div class="container-fluid p-5 bg-gradient bg-success shadow mb-5">
         <div class="row">
+            @if(session()->has('message'))
+                <div class="alert alert-success">{{session('message')}}
+                </div>
+                
+        @endif
             <div class="col-12 tex-light mb-5 p-5">
                 <h1 class="display-2">
                     {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
                 </h1>
-                
             </div>
+            @if ($strazio)
+                
+            <div>{{$strazio->title}}</div>
+            @endif
         </div>
     </div>
     @if ($announcement_to_check)
@@ -62,11 +70,11 @@
                     </form>
                 </div>
             </div>
+            
         </div>
         </div>
         @else
         <div class="spazio">
-            
         </div>
-    @endif
+        @endif
 </x-main>

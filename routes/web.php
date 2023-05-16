@@ -28,6 +28,8 @@ Route::get('/revisor/home',[RevisorController::class, 'index'])->name('revisor.i
 
 // Accetta annuncio
 Route::patch('/accetta/annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement')->middleware('isRevisor');
+// Annulla annuncio
+Route::patch('/annulla/annuncio/{announcement}',[RevisorController::class, 'cancelAnnouncement'])->name('revisor.cancel_announcement')->middleware('isRevisor');
 
 // Rifiuta annuncio
 Route::patch('/rifiuta/annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement')->middleware('isRevisor');

@@ -14,17 +14,22 @@ class RevisorController extends Controller
 {
     public function index(){
         $announcement_to_check=Announcement::where('is_accepted', null)->first();
-        return view('revisor.index', compact('announcement_to_check'));
+        $strazio=[];
+        return view('revisor.index', compact('announcement_to_check','strazio'));
     }
-
     public function acceptAnnouncement(Announcement $announcement){
         $announcement->setAccepted(true);
-        return redirect()->back()->with('message', 'Complimenti, hai accettato l\'annuncio');
+        $strazio=$announcement;
+        $announcement_to_check=Announcement::where('is_accepted', null)->first();
+        //dd($strazio);
+        return view('revisor.index', compact('announcement_to_check','strazio'));
+        //return redirect()->back()->with('strazio',$strazio);
     }
-
+    // with('message', 'Complimenti, hai accettato l\'annuncio')->
     public function rejectAnnouncement(Announcement $announcement){
         $announcement->setAccepted(false);
-        return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
+        $announcement->save();
+        return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio')->with('announcement',$announcement);
     }
     public function becomeRevisor()
     {
