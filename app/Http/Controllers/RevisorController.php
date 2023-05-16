@@ -29,7 +29,7 @@ class RevisorController extends Controller
     public function cancelAnnouncement(Announcement $announcement){
         $announcement->setAccepted(null);
         $announcement->save();
-        $strazio=$announcement;
+        $strazio=[];
         $announcement_to_check=Announcement::where('is_accepted', null)->first();
         return view('revisor.index', compact('announcement_to_check','announcement','strazio'));
         //return redirect()->back()->with('message', 'Complimenti, hai annullato l\'annuncio');
