@@ -1,9 +1,5 @@
 <x-main>
-    {{-- <audio controls muted autoplay>
-      
-        <source src="{{asset('media/audio/StarWars-battuto.mp3')}}" type="audio/mpeg">
-    
-      </audio> --}}
+
     
     @if(session()->has('access.denied'))
                 <div class="alert alert-danger">{{session('access.denied')}}

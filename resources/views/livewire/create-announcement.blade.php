@@ -3,6 +3,14 @@
         <div class="col-12 col-lg-6">
             <h2>Inserisci il tuo annuncio</h2>
             <x-success/>
+             {{--  --}}
+      @if(session()->has('success'))
+      <audio autoplay>
+      
+        <source src="{{asset('media/audio/StarWars-battuto.mp3')}}" type="audio/mpeg">
+    
+      </audio>
+        @endif
            <form wire:submit.prevent="submit">
             <div>
                 <label for="title">Titolo</label>
