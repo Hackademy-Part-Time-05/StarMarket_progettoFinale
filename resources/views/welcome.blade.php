@@ -1,4 +1,10 @@
 <x-main>
+    {{-- <audio controls muted autoplay>
+      
+        <source src="{{asset('media/audio/StarWars-battuto.mp3')}}" type="audio/mpeg">
+    
+      </audio> --}}
+    
     <div class="container">
         <div class="row">
             <div class="col-12">

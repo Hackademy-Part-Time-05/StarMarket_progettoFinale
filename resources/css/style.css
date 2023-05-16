@@ -11,6 +11,11 @@ h6 {
     font-family: "Sigmar", cursive;
 }
 
+.joda{
+    width: 90px;
+    height: 100%;
+}
+
 /* font-family: 'Dosis', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Rajdhani', sans-serif;
@@ -23,8 +28,8 @@ font-family: 'Sigmar', cursive; */
 }
 
 .bounce-top {
-    -webkit-animation: bounce-top 1.9s ease-in infinite alternate both;
-    animation: bounce-top 1.9s ease-in infinite alternate both;
+    -webkit-animation: bounce-top 1.9s ease-in alternate both;
+    animation: bounce-top 1.9s ease-in alternate both;
 }
 
 @-webkit-keyframes bounce-top {
