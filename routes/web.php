@@ -24,11 +24,11 @@ Route::get('announcements/{announcement}',[AnnouncementController::class,'show']
 Route::get('/tutti/annunci',[AnnouncementController::class,'index'])->name('announcement.index');
 
 // Home revisore
-Route::get('/revisor/home',[RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisor/home',[RevisorController::class, 'index'])->name('revisor.index')->middleware('isRevisor');
 
 // Accetta annuncio
-Route::patch('/accetta/annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
+Route::patch('/accetta/annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement')->middleware('isRevisor');
 
 // Rifiuta annuncio
-Route::patch('/rifiuta/annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
+Route::patch('/rifiuta/annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement')->middleware('isRevisor');
 

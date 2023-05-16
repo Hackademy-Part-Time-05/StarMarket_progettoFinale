@@ -5,6 +5,10 @@
     
       </audio> --}}
     
+    @if(session()->has('access.denied'))
+                <div class="alert alert-danger">{{session('access.denied')}}
+                </div>
+        @endif
     <div class="container">
         <div class="row">
             <div class="col-12">
