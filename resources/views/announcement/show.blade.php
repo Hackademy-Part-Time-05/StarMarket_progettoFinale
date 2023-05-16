@@ -1,18 +1,18 @@
 <x-main>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-md-6 col-12">
                 <h1>{{$announcement->title}}</h1>
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="https://picsum.photos/1200/200" class="d-block w-100" alt="...">
+                        <img src="https://picsum.photos/1200/500" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="https://picsum.photos/1200/199" class="d-block w-100" alt="...">
+                        <img src="https://picsum.photos/1200/501" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="https://picsum.photos/1200/201" class="d-block w-100" alt="...">
+                        <img src="https://picsum.photos/1200/499" class="d-block w-100" alt="...">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -25,19 +25,21 @@
                     </button>
                   </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
+
+            <div class="col-md-6 mt-5 col-12">
                 <div class="card-body">
-                    <h5 class="card-title">{{$announcement->title}}</h5>
-                    <p class="card-text">{{$announcement->body}}</p>
-                    <p class="card-text">{{$announcement->price}}</p>
-                    <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-warning">Visualizza</a>
-                    <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="btn btn-warning">Categoria: {{$announcement->category->name}}</a>
+                    <h5 class="card-title mt-3">{{$announcement->title}}</h5>
+                    <p class="card-text mt-4">{{$announcement->body}}</p>
+                    <p class="card-text">Prezzo: €{{$announcement->price}}</p>
+                    
+                    <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class=" mt-4 btn btn-warning">Categoria: {{$announcement->category->name}}</a>
                     <p class="card-footer bg-white">Pubblicato il: {{$announcement->created_at->format('d/m/y')}}</p>
                   </div>
             </div>
+
         </div>
+        
+        
     </div>
    
 </x-main>
