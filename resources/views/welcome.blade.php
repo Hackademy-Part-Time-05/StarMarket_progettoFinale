@@ -5,6 +5,7 @@
                 <div class="alert alert-danger">{{session('access.denied')}}
                 </div>
         @endif
+        <x-success/>
     
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -39,6 +40,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          
     <div class="container">
         <div class="row">
             <div class="col-12">
