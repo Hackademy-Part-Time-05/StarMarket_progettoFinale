@@ -1,8 +1,8 @@
 <x-main>
     <div class="container mb-5">
         <div class="row">
-            <div class="col-12">
-                <p class="h2 my-2 fw-bold">Ecco i nostri annunci</p>
+            <div class="col-12 mt-5">
+                <p class="h2 my-5 fw-bold text-center">Ecco i nostri annunci</p>
                 <div class="row">
                     @forelse ( $category->announcements as $announcement)
                     <div class="col-12 col-md-4 my-4">
@@ -20,10 +20,11 @@
                           </div>
                     </div>
                     @empty
-                    <div class="col-12">
+                    <div class="col-12 text-center">
                         <p class="h4">Non ci sono annunci per questa categoria</p>
                         <p class= "h4">Pubblicane uno: <a href="{{route ('announcement.create')}}"class="btn-warning btn shadow"> Nuovo Annuncio</a></p>
                     </div>
+                    <div style="height: 150px"></div>
                     @endforelse
                 </div>
             </div>
