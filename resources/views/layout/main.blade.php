@@ -12,7 +12,7 @@
     @livewireStyles
     <title>Presto</title>
 </head>
-<body>
+<body class="bg-tertiary">
     <x-navbar/>
     {{$slot}}
     <x-footer/>

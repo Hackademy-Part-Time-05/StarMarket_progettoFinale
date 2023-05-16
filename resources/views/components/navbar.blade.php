@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg mb-5 bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg  bg-dark navbar-dark">
     <div class="container-fluid p-0 mx-4">
         <a class="navbar-brand bounce-top" href="{{ route('welcome') }}"><img class="logo-dim"
                 src="{{ asset('media/logo.png') }}" alt=""></a>
@@ -66,7 +66,7 @@
                     </li>
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page"
+                            <a class="btn btn-outline-success me-2 mb-lg-0 mb-2  position-relative" aria-current="page"
                                 href="{{ route('revisor.index') }}">
                                 Zona Maestro Jedi
                                 <span
