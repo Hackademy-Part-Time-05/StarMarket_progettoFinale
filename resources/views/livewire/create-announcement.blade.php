@@ -4,12 +4,17 @@
             <h2>Inserisci il tuo annuncio</h2>
             <x-success/>
              {{--  --}}
+             @if(session()->has('success'))
+      @else
+        <div class="spazio_2"></div>      
+        @endif
       @if(session()->has('success'))
       <audio autoplay>
       
         <source src="{{asset('media/audio/StarWars-battuto.mp3')}}" type="audio/mpeg">
     
       </audio>
+      
         @endif
            <form wire:submit.prevent="submit">
             <div>
@@ -49,4 +54,8 @@
            </form>
         </div>
     </div>
+    @if(session()->has('success'))
+      @else
+        <div class="spazio"></div>      
+        @endif
 </div>
