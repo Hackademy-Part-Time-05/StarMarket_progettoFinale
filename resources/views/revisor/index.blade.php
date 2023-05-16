@@ -14,6 +14,14 @@
             @if ($strazio)
                 
             <div>{{$strazio->title}}</div>
+            <div class="col-12 col-md-6">
+                <form action="{{route('revisor.cancel_announcement', ['announcement'=>$strazio])}}" method="POST">
+                @csrf
+                @method('PATCH')
+                <button class="btn btn-warning shadow" type="submit"
+                >annulla</button>
+                </form>
+            </div>
             @endif
         </div>
     </div>

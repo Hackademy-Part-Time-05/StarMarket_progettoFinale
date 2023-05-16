@@ -26,11 +26,25 @@ class RevisorController extends Controller
         //return redirect()->back()->with('strazio',$strazio);
     }
     // with('message', 'Complimenti, hai accettato l\'annuncio')->
+    public function cancelAnnouncement(Announcement $announcement){
+        $announcement->setAccepted(null);
+        $announcement->save();
+        $strazio=$announcement;
+        $announcement_to_check=Announcement::where('is_accepted', null)->first();
+        return view('revisor.index', compact('announcement_to_check','announcement','strazio'));
+        //return redirect()->back()->with('message', 'Complimenti, hai annullato l\'annuncio');
+    }
+
     public function rejectAnnouncement(Announcement $announcement){
         $announcement->setAccepted(false);
         $announcement->save();
-        return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio')->with('announcement',$announcement);
+        $strazio=$announcement;
+        $announcement_to_check=Announcement::where('is_accepted', null)->first();
+
+        return view('revisor.index', compact('announcement_to_check','strazio'));
+        //return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio')->with('announcement',$announcement);
     }
+
     public function becomeRevisor()
     {
         Mail::to('admin@starmarket.it')->send(new BecomeRevisor(Auth::user()));
