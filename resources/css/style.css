@@ -133,4 +133,6 @@ font-family: 'Sigmar', cursive; */
       opacity: 1;
     }
   }
-  
+  .spazio{
+        height: 100px;
+  }

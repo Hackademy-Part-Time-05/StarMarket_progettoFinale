@@ -59,12 +59,13 @@
                             con noi
                             {{-- <a href="{{route('become.revisor')}}" class="btn btn-warning text-lighy shadow my-3">Diventa Maestro Jedi</a> --}}
                         </h6>
+                    </div>
                         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                             <h6 class="text-uppercase mb-4 font-weight-bold btn-warning btn">Seguici</h6>
                             <br>
                             <!-- Facebook -->
                             <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!"
-                                role="button"><i class="fab fa-facebook-f"></i></a>
+                                role="button"><i class="fab fa-facebook-f"></i></a><br>
 
                             <!-- Twitter -->
                             <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
