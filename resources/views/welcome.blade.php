@@ -12,23 +12,23 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="{{asset('media/Joda.jpg')}}" class="d-block w-100 opacity-header" alt="...">
-                <div class="position-absolute top-50 start-50 text-center translate-middle">
-                    <h1 class="display-1 text-warning">Star Market</h1>
-                    <p class="text-warning display-5 fw-bold">Comprare o pubblicare, cosa vuoi fare?</p>
+                <div class="position-absolute top-50 start-50 text-center translate-middle neonText">
+                    <h1 class="display-1 ">Star Market</h1>
+                    <p class="display-6 fw-bold ">Comprare o pubblicare, cosa vuoi fare?</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="{{asset('media/super_mario.jpg')}}" class="d-block w-100 opacity-header" alt="...">
-                <div class="position-absolute top-50 start-50 text-center translate-middle">
-                    <h1 class="display-1 text-warning">Star Market</h1>
-                    <p class="text-warning display-6 fw-bold ">Comprare o pubblicare, cosa vuoi fare?</p>
+                <div class="position-absolute top-50 start-50 text-center translate-middle neonText">
+                    <h1 class="display-1 ">Star Market</h1>
+                    <p class="display-6 fw-bold ">Comprare o pubblicare, cosa vuoi fare?</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="{{asset('media/photo3.jpg')}}" class="d-block w-100 opacity-header" alt="...">
-                <div class="position-absolute top-50 start-50 text-center translate-middle">
-                    <h1 class="display-1 text-warning">Star Market</h1>
-                    <p class="text-warning display-5 fw-bold">Comprare o pubblicare, cosa vuoi fare?</p>
+                <div class="position-absolute top-50 start-50 text-center translate-middle neonText">
+                    <h1 class="display-1">Star Market</h1>
+                    <p class="display-6 fw-bold">Comprare o pubblicare, cosa vuoi fare?</p>
                 </div>
               </div>
             </div>
