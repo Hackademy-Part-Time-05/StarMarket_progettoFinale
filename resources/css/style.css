@@ -1,5 +1,6 @@
 body {
     font-family: "Rajdhani", sans-serif;
+    background-color: rgb(244, 244, 225);
 }
 
 h1,
@@ -143,4 +144,14 @@ font-family: 'Sigmar', cursive; */
   }
   .spazio_2{
         height:73px;
+  }
+  .title-dimension{
+       height:25px;
+  }
+  .btn-orange{
+        background-color: #ffc107;
+        border: 1px solid ;
+  }
+  .opacity-header{
+       filter:grayscale(0.9)
   }

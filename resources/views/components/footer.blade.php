@@ -45,7 +45,7 @@
                     <hr class="w-100 clearfix d-md-none" />
 
                     <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold btn-warning btn">Contatti</h6>
                         <p><i class="fas fa-home mr-3"></i> In una galassia lontana lontana</p>
                         <p><i class="fas fa-envelope mr-3"></i> nerd@info.com</p>
@@ -54,13 +54,14 @@
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold btn-warning btn">Passa al lato oscuro: lavora
-                            con noi
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold btn-orange btn">Passa al lato oscuro: lavora con noi
                             <a href="{{route('become.revisor')}}" class="btn btn-warning text-lighy shadow my-3">Diventa Maestro Jedi</a>
+                                
                         </h6>
+                        
                     </div>
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                             <h6 class="text-uppercase mb-4 font-weight-bold btn-warning btn">Seguici</h6>
                             <br>
                             <!-- Facebook -->
