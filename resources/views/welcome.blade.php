@@ -45,7 +45,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="h2 mt-5 fw-bold ">Ecco i nostri annunci</p>
+                <h2 class="h2 mt-5 fw-bold neonText">Ecco i nostri annunci</h2>
                 <progress id="elem"></progress>
 
           <script >
