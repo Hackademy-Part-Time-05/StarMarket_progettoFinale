@@ -1,5 +1,7 @@
 body {
     font-family: "Rajdhani", sans-serif;
+    background-color: #ffc10714;
+    
 }
 
 h1,
@@ -144,3 +146,70 @@ font-family: 'Sigmar', cursive; */
   .spazio_2{
         height:73px;
   }
+  .title-dimension{
+       height:25px;
+  }
+  .btn-orange{
+        background-color: #ffc107;
+        border: 1px solid ;
+  }
+  .opacity-header{
+       filter:grayscale(0.5);
+  }
+
+  .neonText {
+        color: #212529;
+        text-shadow:
+          0 0 7px #fff,
+          /* 0 0 10px #fff, */
+          /* 0 0 21px #fff, */
+          0 0 42px #ffc107,
+          0 0 82px #ffc107;
+          /* 0 0 92px #0fa; */
+          /* 0 0 102px #0fa,
+          0 0 151px #0fa; */
+      }
+
+    
+
+      .neonText2 {
+        color:#ffc107;
+        text-shadow:
+            0 0 7px #000000,
+            0 0 10px #000000,
+            0 0 21px #000000,
+            0 0 42px rgb(244, 244, 225),
+            0 0 82px rgb(244, 244, 225),
+            0 0 92px rgb(244, 244, 225)
+            0 0 102px rgb(244, 244, 225),
+            0 0 151px rgb(244, 244, 225);
+      }
+      
+      h2 {
+        font-size: 4.2rem;
+        animation: flicker 5s infinite alternate;     
+      }
+      
+      /* Flickering animation */
+      @keyframes flicker {
+          
+        0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      
+            text-shadow:
+            0 0 4px #000000,
+            0 0 11px #000000,
+            0 0 19px #000000,
+            0 0 40px rgb(244, 244, 225),
+            0 0 80px rgb(244, 244, 225),
+            0 0 90px rgb(244, 244, 225),
+            0 0 100px rgb(244, 244, 225),
+            0 0 150px rgb(244, 244, 225);
+        
+        }
+        
+        20%, 24%, 55% {        
+            text-shadow: none;
+        }    
+      }
+      
+      

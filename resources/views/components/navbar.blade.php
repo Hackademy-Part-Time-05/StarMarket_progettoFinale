@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg  bg-dark navbar-dark">
     <div class="container-fluid p-0 mx-4">
         <a class="navbar-brand bounce-top" href="{{ route('welcome') }}"><img class="logo-dim"
-                src="{{ asset('media/logo.png') }}" alt=""></a>
+                src="{{ asset('media/logo2.png') }}" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -66,14 +66,17 @@
                     </li>
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
-                            <a class="btn btn-outline-success me-2 mb-lg-0 mb-2  position-relative" aria-current="page"
+                            <a class="btn btn-outline-secondary me-2 mb-lg-0 mb-2 neonText text-white position-relative" aria-current="page"
                                 href="{{ route('revisor.index') }}">
                                 Zona Maestro Jedi
-                                <span
-                                    class="position-absolute top-0 star-100 translate-middle badge rounded-pill bg-danger">
+                               
+                                @if (App\Models\Announcement::toBeRevisionedCount()>0)
+                                <span   class="position-absolute top-0 star-100 translate-middle badge rounded-pill bg-warning text-dark ">
                                     {{ App\Models\Announcement::toBeRevisionedCount()}}
                                     <span class="visually-hidden">Unread messages</span>
                                 </span>
+                                @endif
+                                
                               </a>
                         </li>
                     @endif
