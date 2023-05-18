@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     @endforelse
-                    {{$announcements->links()}}
+                    {{$announcements->appends(Request::except('page'))->links()}}
                 </div>
             </div>
         </div>
