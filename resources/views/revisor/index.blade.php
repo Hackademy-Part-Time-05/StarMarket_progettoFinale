@@ -17,76 +17,83 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-12">
-
-                 @if ($announcement_to_check)
-                    <h2 class="neonText2 mb-3">{{$announcement_to_check->title}}</h2>
-             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                <img src="https://picsum.photos/1200/700" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                <img src="https://picsum.photos/1200/701" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                <img src="https://picsum.photos/1200/699" class="d-block w-100" alt="...">
+            
+            {{-- carousel e card annuncio da revisionare--}}
+            @if ($announcement_to_check)
+            <h2 class="neonText2 mb-3 display-5">{{$announcement_to_check->title}}</h2>
+            <div class="col-md-6 col-lg-6 col-12">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://picsum.photos/1200/700" class="d-block img-fluid w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/1200/701" class="d-block img-fluid w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/1200/699" class="d-block img-fluid w-100" alt="...">
+                        </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
                 </div>
             </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    
-        <div class="col-md-4 mt-5 ps-5 col-12">
-                    <div class="card-body">
-                        {{-- <h5 class="card-title mt-3">{{$announcement->title}}</h5> --}}
-                        <p class="card-text mt-5">{{$announcement_to_check->body}}</p>
-                        <p class="card-text">Prezzo: €{{$announcement_to_check->price}}</p>
-                        
-                        <a href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}" class=" my-3 btn btn-warning">Categoria: {{$announcement_to_check->category->name}}</a>
-                        <p class="card-footer">Pubblicato il: {{$announcement_to_check->created_at->format('d/m/y')}}  <br>Autore: {{$announcement_to_check->user->name}}</p>
-                        <span><form  class="d-inline" action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
+            <div class="col-md-6 col-lg-3 col-12">
+                <div class="card-body">
+                    {{-- <h5 class="card-title mt-3">{{$announcement->title}}</h5> --}}
+                    <p class="card-text mt-4"><strong>{{$announcement_to_check->body}}</strong></p>
+                    <p class="card-text">Prezzo: €{{$announcement_to_check->price}}</p>
+                    
+                    <a href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}" class=" my-3 btn btn-warning">Categoria: {{$announcement_to_check->category->name}}</a>
+                    <p class="card-footer">Pubblicato il: {{$announcement_to_check->created_at->format('d/m/y')}}  <br>Autore: {{$announcement_to_check->user->name}}</p>
+                    <span><form  class="d-inline" action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button class="btn btn-success shadow d-inline" type="submit">Promuovi</button>
+                        </form></span>
+                        <p class="d-inline"><form class="d-inline" action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-success shadow d-inline" type="submit"
-                            >Accetta</button>
-                            </form></span>
-                            <p class="d-inline"><form class="d-inline" action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button class="btn btn-danger shadow d-inline" type="submit">Rifiuta</button>
-                            </form></p>
-                      </div>
-                      
+                            <button class="btn btn-danger shadow d-inline" type="submit">Respingi</button>
+                        </form></p>
                 </div>
+                  
             </div>
+            @endif
+
+
+            {{-- annuncio già revisionato --}}
             @if ($strazio)
-           
-            <div class="col-12 col-md-2">
-                 <div>
-                    <h6>
-                        Hai appena revisionato questo annuncio, vuoi annullare?
-                    </h6>{{$strazio->title}}</div>
-                <form action="{{route('revisor.cancel_announcement', ['announcement'=>$strazio])}}" method="POST">
-                @csrf
-                @method('PATCH')
-                <button class="btn btn-warning shadow" type="submit">annulla</button>
-                </form>
+            <div class="col-12 col-md-4 col-lg-3 mt-5 card h-100 pb-2 shadow-mrk">
+                <div>
+                    <p>
+                        Hai appena revisionato questo annuncio: <strong class="text-secondary"><p class="h4">{{$strazio->title}}</p></strong>
+                    </p>
+                    <h6> Vuoi annullare?</h6>
+                </div>
+                    <form action="{{route('revisor.cancel_announcement', ['announcement'=>$strazio])}}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                        <span>Usa la forza</span>
+                        <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">Richiama</button>
+                    </form>
             </div>       
-   
-    @endif
+            @endif
         </div>
+    </div>
+    @if ($announcement_to_check)
+    @else
+    <div class="spazio mt-5">
+    </div>
+    @endif    
        
-        </div>
-        @else
-        <div class="spazio">
-        </div>
-        @endif
+
+        
+
 </x-main>

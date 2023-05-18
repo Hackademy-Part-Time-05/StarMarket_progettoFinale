@@ -13,7 +13,7 @@
                               <h5 class="card-title">{{$announcement->title}}</h5>
                               {{-- <p class="card-text">{{$announcement->body}}</p> --}}
                               <p class="card-text">Prezzo: {{$announcement->price}}€</p>
-                              <a href="#" class="btn btn-warning mb-2 w-100">Visualizza</a>
+                              <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-warning mb-2 w-100">Visualizza</a>
                               
                               <p class="card-footer bg-white">Pubblicato il: {{$announcement->created_at->format('d/m/y')}} <br>
                                Autore: {{$announcement->user->name ?? ''}}</p>
