@@ -66,11 +66,11 @@
                     </li>
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
-                            <a class="btn btn-outline-success me-2 mb-lg-0 mb-2  position-relative" aria-current="page"
+                            <a class="btn btn-outline-secondary me-2 mb-lg-0 mb-2 neonText text-white position-relative" aria-current="page"
                                 href="{{ route('revisor.index') }}">
                                 Zona Maestro Jedi
                                 <span
-                                    class="position-absolute top-0 star-100 translate-middle badge rounded-pill bg-danger">
+                                    class="position-absolute top-0 star-100 translate-middle badge rounded-pill bg-light text-dark ">
                                     {{ App\Models\Announcement::toBeRevisionedCount()}}
                                     <span class="visually-hidden">Unread messages</span>
                                 </span>

@@ -45,23 +45,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="h2 mt-5 fw-bold neonText">Ecco i nostri annunci</h2>
-                <progress id="elem"></progress>
-
-          <script >
-            elem.onclick = function() {
-              animate({
-                duration: 1000,
-                timing: function(timeFraction) {
-                  return timeFraction;
-                },
-                draw: function(progress) {
-                  elem.style.width = progress * 100 + '%';
-                }
-              });
-            };
-          </script>
-
+                <h2 class="h2 mt-5 fw-bold neonText2">Ecco i nostri annunci</h2>
                 <div class="row">
                     @foreach ($announcements as $announcement)
                     <div class="col-12 col-md-6 col-lg-4 my-4">

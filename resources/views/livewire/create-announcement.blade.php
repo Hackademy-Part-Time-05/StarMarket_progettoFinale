@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 col-lg-6">
-            <h2 class="mt-5">Inserisci il tuo annuncio</h2>
+            <h2 class="mt-5 neonText2">Inserisci il tuo annuncio</h2>
             <x-success/>
              {{--  --}}
              @if(session()->has('success'))
