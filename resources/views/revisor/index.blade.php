@@ -52,12 +52,12 @@
                     
                     <a href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}" class=" my-3 btn btn-warning">Categoria: {{$announcement_to_check->category->name}}</a>
                     <p class="card-footer">Pubblicato il: {{$announcement_to_check->created_at->format('d/m/y')}}  <br>Autore: {{$announcement_to_check->user->name}}</p>
-                    <span><form  class="d-inline" action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
+                    <span><form  class="d-inline" action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check],  ['stato'=>'promosso'])}}" method="POST">
                         @csrf
                         @method('PATCH')
                         <button class="btn btn-success shadow d-inline" type="submit">Promuovi</button>
                         </form></span>
-                        <p class="d-inline"><form class="d-inline" action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
+                        <p class="d-inline"><form class="d-inline" action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check], ['stato'=>'rifiutato'])}}" method="POST">
                             @csrf
                             @method('PATCH')
                             <button class="btn btn-danger shadow d-inline" type="submit">Respingi</button>
@@ -69,15 +69,15 @@
 
 
             {{-- annuncio già revisionato --}}
-            @if ($strazio)
+            @if ($announcement)
             <div class="col-12 col-md-4 col-lg-3 mt-5 card h-100 pb-2 shadow-mrk border border-danger border-5">
                 <div>
                     <p class="fw-bold">
-                        Hai appena revisionato questo annuncio: <strong class="text-dark"><p class="h4">{{$strazio->title}}</p></strong>
+                        Hai appena<span class="h4"> {{$stato}} </span> questo annuncio: <strong class="text-dark"><p class="h4">{{$announcement->title}}</p></strong>
                     </p>
                     <h6> Vuoi annullare?</h6>
                 </div>
-                    <form action="{{route('revisor.cancel_announcement', ['announcement'=>$strazio])}}" method="POST">
+                    <form action="{{route('revisor.cancel_announcement', ['announcement'=>$announcement])}}" method="POST">
                     @csrf
                     @method('PATCH')
                         <span class="fw-bold">Usa la forza</span>

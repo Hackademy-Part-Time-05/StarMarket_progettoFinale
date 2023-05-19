@@ -14,34 +14,33 @@ class RevisorController extends Controller
 {
     public function index(){
         $announcement_to_check=Announcement::where('is_accepted', null)->first();
-        $strazio=[];
-        return view('revisor.index', compact('announcement_to_check','strazio'));
+        $announcement=[];
+        return view('revisor.index', compact('announcement_to_check','announcement'));
     }
-    public function acceptAnnouncement(Announcement $announcement){
+    public function acceptAnnouncement(Announcement $announcement,){
+        $stato='accettato';
         $announcement->setAccepted(true);
-        $strazio=$announcement;
         $announcement_to_check=Announcement::where('is_accepted', null)->first();
-        //dd($strazio);
-        return view('revisor.index', compact('announcement_to_check','strazio'));
-        //return redirect()->back()->with('strazio',$strazio);
+        return view('revisor.index', compact('announcement_to_check','announcement','stato'));
+        
     }
     // with('message', 'Complimenti, hai accettato l\'annuncio')->
     public function cancelAnnouncement(Announcement $announcement){
         $announcement->setAccepted(null);
         $announcement->save();
-        $strazio=[];
+        $announcement=[];
         $announcement_to_check=Announcement::where('is_accepted', null)->first();
-        return view('revisor.index', compact('announcement_to_check','announcement','strazio'));
+        return view('revisor.index', compact('announcement_to_check','announcement'));
         //return redirect()->back()->with('message', 'Complimenti, hai annullato l\'annuncio');
     }
 
     public function rejectAnnouncement(Announcement $announcement){
+        $stato='rifiutato';
         $announcement->setAccepted(false);
         $announcement->save();
-        $strazio=$announcement;
         $announcement_to_check=Announcement::where('is_accepted', null)->first();
 
-        return view('revisor.index', compact('announcement_to_check','strazio'));
+        return view('revisor.index', compact('announcement_to_check','announcement','stato'));
         //return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio')->with('announcement',$announcement);
     }
 
