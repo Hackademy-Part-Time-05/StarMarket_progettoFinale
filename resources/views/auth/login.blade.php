@@ -1,8 +1,9 @@
 <x-main>
+    <div class="spazio"></div>
     <div class="container mt-5">
         <div class="row">
             <div class="col-8 mx-auto">
-                <h1>Effettua il Login</h1>
+                <h2 class="neonText2">Effettua il Login</h2>
                 <form action="{{route('login')}}" method="POST">
                 @csrf
                     <div class="row g-3">

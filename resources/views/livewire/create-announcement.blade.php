@@ -54,8 +54,7 @@
            </form>
         </div>
     </div>
-    @if(session()->has('success'))
-      @else
+   
         <div class="spazio"></div>      
-        @endif
+        
 </div>
