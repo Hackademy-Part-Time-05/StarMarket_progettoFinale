@@ -140,6 +140,15 @@ font-family: 'Sigmar', cursive; */
       opacity: 1;
     }
   }
+
+  .nav-link{
+        color: #fff;
+  }
+
+  .nav-link a:hover{
+        border-bottom: 2 px solid yellow;
+  }
+
   .spazio{
         height: 100px;
   }
