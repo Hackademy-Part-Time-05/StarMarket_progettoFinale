@@ -70,17 +70,17 @@
 
             {{-- annuncio già revisionato --}}
             @if ($strazio)
-            <div class="col-12 col-md-4 col-lg-3 mt-5 card h-100 pb-2 shadow-mrk">
+            <div class="col-12 col-md-4 col-lg-3 mt-5 card h-100 pb-2 shadow-mrk border border-danger border-5">
                 <div>
-                    <p>
-                        Hai appena revisionato questo annuncio: <strong class="text-secondary"><p class="h4">{{$strazio->title}}</p></strong>
+                    <p class="fw-bold">
+                        Hai appena revisionato questo annuncio: <strong class="text-dark"><p class="h4">{{$strazio->title}}</p></strong>
                     </p>
                     <h6> Vuoi annullare?</h6>
                 </div>
                     <form action="{{route('revisor.cancel_announcement', ['announcement'=>$strazio])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                        <span>Usa la forza</span>
+                        <span class="fw-bold">Usa la forza</span>
                         <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">Richiama</button>
                     </form>
             </div>       
