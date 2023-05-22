@@ -46,6 +46,24 @@ class CreateAnnouncement extends Component
 
 
     ];
+
+    public function updatedTemporaryImages(){
+        if($this->validate([
+            'temporary_images.*'=>'image|max:1024',
+        ])){
+        foreach($this->temporary_images as $image)
+        {
+            $this->images[]=$image;
+        }
+    } 
+    }
+
+    public function removeImage($key){
+if(in_array($key, array_keys($this->images))){
+    unset($this->images[$key]);
+}
+    }
+
     public function render()
     {
         return view('livewire.create-announcement');

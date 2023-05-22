@@ -48,19 +48,18 @@
             </div>
         
             <div class="my-3">
-                <input wire:model="temporary_images" type="file" name="images"
-                 multiple class="form-control shadow @error('temporary_images.*')is-invalid @enderror" placeholder="Img"/>
-                 @error('temporary_images') <span class="small text-danger">{{$message}}</span>@enderror
+                <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*')is-invalid @enderror" placeholder="Img"/> @error('temporary_images') <span class="small text-danger">{{$message}}</span>@enderror
             </div>
             @if (!empty($images))
+            {{-- @dd(@$image) --}}
             <div class="row">
                 <div class="col-12">
                     <p>photo preview</p>
                     <div class="row border border-4 border-info rounded py-4">
                         @foreach ($images as $key => $image)
-                        @dd($image)
+                        
                             <div class="col my-3">
-                                <div class="img-preview mx-auto rounded" style="background-image: url({{ $image->temporaryUrl() }});"></div>
+                                <div class="img-preview mx-auto rounded" style="background-image: url({{ $image->temporaryUrl() }})"></div>
                                 <button class="btn btn-danger d-block text-center-mt-2 mx-auto" wire:click="removeImage({{ $key }})" type="button">Cancella</button>
                             </div>
                         @endforeach

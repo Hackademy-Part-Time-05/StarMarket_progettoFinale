@@ -245,3 +245,7 @@ text-shadow:
         }    
       }
       
+.img-preview{
+        width: 300PX;
+        height: 150PX;
+}
