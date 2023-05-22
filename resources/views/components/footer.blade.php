@@ -1,5 +1,5 @@
 <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container-fluid mt-5 bg-dark">
+<div class="container-fluid mt-5 bg-dark sticky-lg-bottom">
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white">
         <!-- Grid container -->

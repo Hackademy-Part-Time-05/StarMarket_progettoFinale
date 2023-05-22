@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg  bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
     <div class="container-fluid p-0 mx-4">
         <a class="navbar-brand bounce-top" href="{{ route('welcome') }}"><img class="logo-dim"
                 src="{{ asset('media/logo2.png') }}" alt=""></a>
