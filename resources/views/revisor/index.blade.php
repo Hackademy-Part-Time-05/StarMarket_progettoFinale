@@ -23,6 +23,19 @@
             <h2 class="neonText2 mb-3 display-5">{{$announcement_to_check->title}}</h2>
             <div class="col-md-6 col-lg-6 col-12">
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    @if ($announcement_to_check->images)
+                    <div class="carousel-inner">
+                        @foreach ($announcement_to_check->images as $image )
+                            <div class="carousel-item @if($loop->first)active  @endif ">
+                                <img src="{{Storage::url($image->path)}}" alt="" class="img-fluid p-3 rounded" alt="">
+                            </div>
+                        @endforeach
+                    </div>
+                        
+                    @else
+                    
+                    
+                    {{-- @endif --}}
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="https://picsum.photos/1200/700" class="d-block img-fluid w-100" alt="...">
@@ -33,6 +46,7 @@
                         <div class="carousel-item">
                             <img src="https://picsum.photos/1200/699" class="d-block img-fluid w-100" alt="...">
                         </div>
+                        @endif
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>

@@ -59,25 +59,37 @@ class CreateAnnouncement extends Component
     }
 
     public function removeImage($key){
-if(in_array($key, array_keys($this->images))){
-    unset($this->images[$key]);
-}
+        if(in_array($key, array_keys($this->images))){
+         unset($this->images[$key]); 
+        }
     }
 
     public function render()
     {
         return view('livewire.create-announcement');
     }
+
     public function submit()
     {
         $this->validate();
-        $category = Category::find($this->category);
-        $announcement = $category->announcements()->create([
-            'title' => $this->title,
-            'body' => $this->body,
-            'price'=> $this->price,
-        ]);
-        Auth::user()->announcements()->save($announcement);
+
+
+         $this->announcement=Category::find($this->category)->announcements()->create($this->validate());
+        if(count($this->images)){
+            foreach($this->images as $image){
+                $this->announcement->images()->create(['path'=>$image->store('images','public')]);
+            }
+        }
+
+      
+        $this->announcement->title=$this->title;
+        $this->announcement->body = $this->body;
+        $this->announcement->price=$this->price;
+       
+       
+        Auth::user()->announcements()->save($this->announcement);
+        // $this->announcement->user()->associate(Auth::user());
+        // $this->announcement=Category::find($this->category)->announcements()->create($this->validate());
         
         session()->flash('success','Annuncio creato correttamente');
         $this->cleanForm();
@@ -87,6 +99,8 @@ if(in_array($key, array_keys($this->images))){
         $this->body='';
         $this->category='';
         $this->price='';
+        $this->images = [];
+        $this->temporary_images=[];
     }
     public function updated($propertyName)
     {
