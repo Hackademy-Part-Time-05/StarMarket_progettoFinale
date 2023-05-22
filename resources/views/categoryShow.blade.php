@@ -1,7 +1,7 @@
 <x-main>
-    <div class="container mb-5">
+    <div class="container overlay card mt-5">
         <div class="row">
-            <div class="col-12 mt-5">
+            <div class="col-12 mt-3">
                 <h2 class="h2 my-5 fw-bold text-center neonText2">Ecco i nostri annunci nella categoria:  {{$category->name}}</h2>
                 <div class="row">
                     @forelse  ( $category->announcements as $announcement)

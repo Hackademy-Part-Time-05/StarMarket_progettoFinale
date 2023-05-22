@@ -44,8 +44,8 @@
           
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h2 class="h2 mt-5 fw-bold neonText2">Ecco i nostri annunci</h2>
+            <div class="col-12 overlay my-5 card">
+                <h2 class="h2 m-5 fw-bold neonText2">Ecco i nostri annunci</h2>
                 <div class="row">
                     @foreach ($announcements as $announcement)
                     <div class="col-12 col-md-6 col-lg-4 my-4">

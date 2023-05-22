@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row">
+<div class="container overlay mt-5 card">
+    <div class="row mx-5">
         <div class="col-12 col-lg-6">
             <h2 class="mt-5 neonText2">Inserisci il tuo annuncio</h2>
             <x-success/>

@@ -1,6 +1,6 @@
 <x-main>
     <div class="spazio"></div>
-    <div class="container mt-5">
+    <div class="container overlay card py-5 mt-5">
         <div class="row">
             <div class="col-8 mx-auto">
                 <h2 class="neonText2">Effettua il Login</h2>

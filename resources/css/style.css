@@ -1,8 +1,15 @@
 body {
     font-family: "Rajdhani", sans-serif;
-    background-color: #ffc10714;
-    
+    /* background-color: #ffc10714; */
+    background: url('/public/media/sfondo/sfondo.jfif') fixed ;
+    background-size: cover;    
 }
+
+.overlay{
+       
+        background-color: #d4cb9fa9;
+        
+    }
 
 h1,
 h2,

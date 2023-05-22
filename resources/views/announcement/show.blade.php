@@ -1,5 +1,5 @@
 <x-main>
-    <div class="container mt-5">
+    <div class="container overlay p-5 mt-5">
         <div class="row">
             <div class="col-md-6 col-12">
                 <h2 class="neonText2">{{$announcement->title}}</h2>
