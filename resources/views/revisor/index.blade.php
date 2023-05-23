@@ -15,7 +15,7 @@
         
     </div>
     
-    <div class="container">
+    <div class="container my- overlay card">
         <div class="row">
             
             {{-- carousel e card annuncio da revisionare--}}

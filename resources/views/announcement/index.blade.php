@@ -1,5 +1,5 @@
 <x-main>
-    <div class="container m-5 overlay card">
+    <div class="container my-5 overlay card">
         <div class="row">
             <div class="col-12">
                 <h2 class="h2 m-5 fw-bold neonText2">Ecco i nostri annunci</h2>

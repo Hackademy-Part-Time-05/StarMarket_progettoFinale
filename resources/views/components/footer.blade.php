@@ -1,4 +1,4 @@
-<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="spazio"></div>
 <div class="container-fluid mt-5 bg-dark position-absolute">
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white">
@@ -22,7 +22,7 @@
                     <hr class="w-100 clearfix d-md-none" />
 
                     <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    {{-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold btn-warning btn">Prodotti</h6>
                         <p>
                             <a class="text-white">MDBootstrap</a>
@@ -36,7 +36,7 @@
                         <p>
                             <a class="text-white">Bootstrap Angular</a>
                         </p>
-                    </div>
+                    </div> --}}
                     <!-- Grid column -->
 
                     <hr class="w-100 clearfix d-md-none" />
@@ -67,15 +67,15 @@
                             <br>
                             <!-- Facebook -->
                             <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!"
-                                role="button"><i class="fab fa-facebook-f"></i></a><br>
+                                role="button"><i class="fab fa-facebook-f"></i></a>
 
                             <!-- Twitter -->
-                            <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
-                                role="button"><i class="fab fa-twitter"></i></a>
+                            {{-- <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
+                                role="button"><i class="fab fa-twitter"></i></a> --}}
 
                             <!-- Google -->
-                            <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!"
-                                role="button"><i class="fab fa-google"></i></a>
+                            {{-- <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!"
+                                role="button"><i class="fab fa-google"></i></a> --}}
 
                             <!-- Instagram -->
                             <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!"
@@ -97,8 +97,8 @@
 
         <!-- Copyright -->
         <div class="text-center">
-            © 2023 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            © 2023 Le Grupie Di Arnold
+            
         </div>
         <!-- Copyright -->
     </footer>
