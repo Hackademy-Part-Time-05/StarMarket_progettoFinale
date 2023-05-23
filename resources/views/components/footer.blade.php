@@ -1,4 +1,5 @@
 <div class="spazio"></div>
+<div class="spazio"></div>
 <div class="container-fluid mt-5 bg-dark position-absolute">
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white">
@@ -7,7 +8,7 @@
             <!-- Section: Links -->
             <section class="">
                 <!--Grid row-->
-                <div class="row">
+                <div class="row m-5">
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold btn-warning btn">
