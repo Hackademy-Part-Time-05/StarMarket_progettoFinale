@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark border-bottom p-0" id="mainNavbar">
     <div class="container-fluid p-0 mx-4">
-        <a class="navbar-brand bounce-top" href="{{ route('welcome') }}"><img class="logo-dim"
+        <a class="navbar-brand bounce-top " href="{{ route('welcome') }}"><img class="logo-dim"
                 src="{{ asset('media/logo2.png') }}" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler text-presto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,7 +17,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                    <ul class="dropdown-menu rounded-0 m-0" aria-labelledby="categoriesDropdown">
                         @foreach ($categories as $category)
                             <li><a class="dropdown-item"
                                     href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
@@ -60,7 +60,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="btn btn-warning mb-lg-0 mb-2 me-2" href="{{ route('announcement.create') }}">Inserisci
+                        <a class="btn btn-warning mb-lg-0 mb-2 me-2 margin" href="{{ route('announcement.create') }}">Inserisci
                             Annuncio
                           </a>
                     </li>
@@ -91,9 +91,9 @@
                     <x-_locale lang="en"/>
                 </li>
                 <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-                    <input class="form-control me-2 " name="searched" type="search" placeholder="Che la ricerca sia con te"
+                    <input class="form-control me-2 p-0 margin2" name="searched" type="search" placeholder="Che la ricerca sia con te"
                         aria-label="Search">
-                    <button class="btn btn-warning" type="submit">Ricerca</button>
+                    <button class="btn btn-warning margin2" type="submit">Ricerca</button>
                 </form>
         </div>
     </div>
