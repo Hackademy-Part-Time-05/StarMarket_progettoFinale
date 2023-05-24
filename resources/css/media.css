@@ -1,0 +1,24 @@
+@media (max-width: 991.98px) { 
+   
+        .navbar .nav-item {
+            padding: 0 0;
+        }
+
+        .navbar.thin .nav-item {
+            padding: 0 0;
+        }
+        
+        .navbar .nav-link {
+            color: var(--text-header-contrast);       
+        }
+
+         .navbar-nav .nav-link.active::after {
+            height: 0;
+        }
+
+         .navbar-nav .nav-link::before {
+            height: 0;
+        }
+
+        
+ /* ------------------------------------------------------------------- */

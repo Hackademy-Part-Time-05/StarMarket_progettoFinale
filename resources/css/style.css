@@ -1,3 +1,13 @@
+:root {
+        --primary-presto: #ffc107;
+        /* --secondary-presto: #091E3E;
+        --alpha-primary-presto: rgba(9, 30, 62, .7);
+        --text-header: white;
+        --text-header-contrast: black; */
+        --padding-big-button: 10px 25px;
+    }
+    
+
 body {
     font-family: "Rajdhani", sans-serif;
     /* background-color: #ffc10714; */
@@ -43,6 +53,96 @@ font-family: 'Sigmar', cursive; */
     -webkit-animation:bounce-top 1.5s both;animation:bounce-top 1.5s both
 }
 
+.navbar .nav-link {
+        
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    }
+    
+    .navbar.bg-white .nav-link {
+        color: var(--text-header-contrast);
+    }
+    
+    .navbar .nav-item .nav-link-icon-presto {
+        
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+
+    }
+    
+    .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+        color: var(--primary-presto);
+    }
+    
+    .navbar .nav-item {
+        position: relative;
+        padding: 10px;
+        transition: all linear 300ms;
+    }
+
+    .margin{
+        margin-top: 10px;
+    }
+
+    .margin2{
+        margin-top: 10px;
+        margin-bottom: 13px;
+    }
+    
+    .navbar .navbar-brand {
+        color: var(--text-header);
+    }
+    
+    .navbar.bg-white .navbar-brand {
+        color: var(--primary-presto);
+    }
+    
+    #mainNavbar {
+        border-color: rgb(171, 171, 171);
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    
+    .navbar-nav .nav-link.active::before {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        display: inline-block;
+        content: '';
+        height: 2px;
+        width: 70%;
+        transform: translateX(-50%);
+        background-color: var(--primary-presto);
+    }
+    
+
+    .navbar-nav .nav-link::before {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        display: inline-block;
+        content: '';
+        height: 2px;
+        width: 0;
+        background-color: var(--primary-presto);
+        transform: translateX(-50%);
+        transition: all linear 250ms;
+    }
+    
+    .navbar-nav .nav-link:hover::before {
+        width: 70%;
+    }
+    
+    /* .navbar-nav .nav-link.nav-link-icon-presto:hover::before {
+        width: 0;
+    } */
+    
+    .navbar.thin .nav-item {
+        padding: 15px 0;
+    }
+    
+   
  @-webkit-keyframes bounce-top {
     0% {
       -webkit-transform: translateY(-45px);
