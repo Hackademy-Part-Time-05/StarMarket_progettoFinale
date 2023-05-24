@@ -105,8 +105,41 @@
     @else
     <div class="spazio mt-5">
     </div>
+    
     @endif    
-       
+<div class="container">
+    <div class="row">
+        <div class="col-12 overlay">
+            <h3 class=" text-center text-white">annunci rifiutati</h3>
+            <table class="w-100">
+                <thead class="text-white">
+                    <tr>
+                        <th>Titolo</th>
+                        <th>Autore</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="text-white">
+                    @foreach ($refusedAnnouncements as $announcement )
+                    <tr>
+                        <td>{{$announcement->title}}</td>
+                        <td>{{$announcement->user->name}}</td>
+                        <td class="text-center"><form action="{{route('revisor.cancel_announcement', ['announcement'=>$announcement])}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <span class="fw-bold">Usa la forza</span>
+                            <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">Richiama</button>
+                        </form></td>
+                    </tr>
+                    
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+</div>
+        
 
         
 

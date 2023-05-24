@@ -81,6 +81,15 @@
                         </li>
                     @endif
                 @endguest
+                <li>
+                    <x-_locale lang="it"/>
+                </li>
+                <li>
+                    <x-_locale lang="es"/>
+                </li>
+                <li>
+                    <x-_locale lang="en"/>
+                </li>
                 <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
                     <input class="form-control me-2 p-0 margin2" name="searched" type="search" placeholder="Che la ricerca sia con te"
                         aria-label="Search">
