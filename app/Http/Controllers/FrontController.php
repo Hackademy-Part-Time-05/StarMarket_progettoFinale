@@ -25,7 +25,7 @@ class FrontController extends Controller
     }
 
     public function setLanguage($lang){
-        dd($lang);
+        
         session()->put('locale', $lang);
         return redirect()->back();
     }
