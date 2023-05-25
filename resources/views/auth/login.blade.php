@@ -3,7 +3,7 @@
     <div class="container overlay card py-5 mt-5">
         <div class="row">
             <div class="col-8 mx-auto">
-                <h2 class="neonText2">Effettua il Login</h2>
+                <h2 class="neonText2">{{__('ui.login')}}</h2>
                 <form action="{{route('login')}}" method="POST">
                 @csrf
                     <div class="row g-3">
@@ -18,7 +18,7 @@
                             @error('password') <span class="small text-danger">{{$message}}</span>@enderror
                         </div>
                         <div>
-                            <button type="submit" class="btn btn-warning">Accedi</button>
+                            <button type="submit" class="btn btn-warning">{{__('ui.loginBtn')}}</button>
                         </div>
                     </div>
                 </form>

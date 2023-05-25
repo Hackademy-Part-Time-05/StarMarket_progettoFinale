@@ -2,7 +2,7 @@
     <div class="container overlay card mt-5">
         <div class="row">
             <div class="col-12 mt-3">
-                <h2 class="h2 my-5 fw-bold text-center neonText2">Ecco i nostri annunci nella categoria:  {{$category->name}}</h2>
+                <h2 class="h2 my-5 fw-bold text-center neonText2">{{__('ui.announcementCategory')}}  {{$category->name}}</h2>
                 <div class="row">
                     @forelse  ( $category->announcements as $announcement)
                    
@@ -12,18 +12,18 @@
                             <div class="card-body">
                               <h5 class="card-title">{{$announcement->title}}</h5>
                               {{-- <p class="card-text">{{$announcement->body}}</p> --}}
-                              <p class="card-text">Prezzo: {{$announcement->price}}€</p>
-                              <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-warning mb-2 w-100">Visualizza</a>
+                              <p class="card-text">{{__('ui.price')}}: {{$announcement->price}}€</p>
+                              <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-warning mb-2 w-100">{{__('ui.details')}}</a>
                               
-                              <p class="card-footer bg-white">Pubblicato il: {{$announcement->created_at->format('d/m/y')}} <br>
-                               Autore: {{$announcement->user->name ?? ''}}</p>
+                              <p class="card-footer bg-white">{{__('ui.publishedOn')}}: {{$announcement->created_at->format('d/m/y')}} <br>
+                                {{__('ui.author')}}: {{$announcement->user->name ?? ''}}</p>
                             </div>
                           </div>
                     </div>
                     @empty
                     <div class="col-12 text-center">
-                        <p class="h4">Non ci sono annunci per questa categoria</p>
-                        <p class= "h4">Pubblicane uno: <a href="{{route ('announcement.create')}}"class="btn-warning btn shadow"> Nuovo Annuncio</a></p>
+                        <p class="h4">{{__("ui.announcementEmpty")}}</p>
+                        <p class= "h4">{{__('ui.publishOne')}}: <a href="{{route ('announcement.create')}}"class="btn-warning btn shadow"> {{__('ui.newAnnouncementj')}}</a></p>
                     </div>
                     <div class="spazio"></div>
                     <div class="spazio"></div>

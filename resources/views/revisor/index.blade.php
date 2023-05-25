@@ -8,7 +8,7 @@
                 </div>
              @endif
                 <h1 >
-                    {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare:' : 'Non ci sono annunci da revisionare' }}
+                    {{ $announcement_to_check ? __('ui.revision') : __('ui.notrevision') }}
                 </h1>
             </div>
         </div>
@@ -62,19 +62,19 @@
                 <div class="card-body">
                     {{-- <h5 class="card-title mt-3">{{$announcement->title}}</h5> --}}
                     <p class="card-text mt-4"><strong>{{$announcement_to_check->body}}</strong></p>
-                    <p class="card-text">Prezzo: €{{$announcement_to_check->price}}</p>
+                    <p class="card-text">{{__('ui.price')}}: €{{$announcement_to_check->price}}</p>
                     
-                    <a href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}" class=" my-3 btn btn-warning">Categoria: {{$announcement_to_check->category->name}}</a>
-                    <p class="card-footer">Pubblicato il: {{$announcement_to_check->created_at->format('d/m/y')}}  <br>Autore: {{$announcement_to_check->user->name}}</p>
+                    <a href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}" class=" my-3 btn btn-warning">{{__('ui.category')}}: {{$announcement_to_check->category->name}}</a>
+                    <p class="card-footer">{{__('ui.publishedOn')}}: {{$announcement_to_check->created_at->format('d/m/y')}}  <br>{{__('ui.author')}}: {{$announcement_to_check->user->name}}</p>
                     <span><form  class="d-inline" action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check],  ['stato'=>'promosso'])}}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-success shadow d-inline" type="submit">Promuovi</button>
+                        <button class="btn btn-success shadow d-inline" type="submit">{{__('ui.accept')}}</button>
                         </form></span>
                         <p class="d-inline"><form class="d-inline" action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check], ['stato'=>'rifiutato'])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-danger shadow d-inline" type="submit">Respingi</button>
+                            <button class="btn btn-danger shadow d-inline" type="submit">{{__('ui.reject')}}</button>
                         </form></p>
                 </div>
                   
@@ -87,15 +87,20 @@
             <div class="col-12 col-md-4 col-lg-3 mt-5 card h-100 pb-2 shadow-mrk border border-danger border-5">
                 <div>
                     <p class="fw-bold">
-                        Hai appena<span class="h4"> {{$stato}} </span> questo annuncio: <strong class="text-dark"><p class="h4">{{$announcement->title}}</p></strong>
+                        {{__('ui.youHaveJust')}}<span class="h4"> @if ($stato=='accettato')
+                            {{__('ui.accepted')}}
+                            @else 
+                            {{__('ui.rejected')}}
+                            
+                        @endif</span> {{__('ui.thisAnnouncement')}}: <strong class="text-dark"><p class="h4">{{$announcement->title}}</p></strong>
                     </p>
-                    <h6> Vuoi annullare?</h6>
+                    <h6> {{__('ui.wantToCancel')}}</h6>
                 </div>
                     <form action="{{route('revisor.cancel_announcement', ['announcement'=>$announcement])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                        <span class="fw-bold">Usa la forza</span>
-                        <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">Richiama</button>
+                        <span class="fw-bold">{{__('ui.useTheForce')}}</span>
+                        <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">{{__("ui.recall")}}</button>
                     </form>
             </div>       
             @endif
@@ -110,12 +115,13 @@
 <div class="container">
     <div class="row">
         <div class="col-12 overlay">
-            <h3 class=" text-center text-white">annunci rifiutati</h3>
+            <h3 class=" text-center text-white">{{__('ui.rejectedAnnouncements')}}</h3>
             <table class="w-100">
                 <thead class="text-white">
                     <tr>
-                        <th>Titolo</th>
-                        <th>Autore</th>
+                        <th>{{__('ui.title')}}</th>
+                        <th>{{__('ui.author')}}</th>
+                        
                         <th></th>
                     </tr>
                 </thead>
@@ -127,8 +133,8 @@
                         <td class="text-center"><form action="{{route('revisor.cancel_announcement', ['announcement'=>$announcement])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <span class="fw-bold">Usa la forza</span>
-                            <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">Richiama</button>
+                            <span class="fw-bold">{{__('ui.useTheForce')}}</span>
+                            <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">{{__('ui.recall')}}</button>
                         </form></td>
                     </tr>
                     

@@ -15,7 +15,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="categoriesDropdown" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                        {{__('ui.categories')}}
                     </a>
                     <ul class="dropdown-menu rounded-0 m-0" aria-labelledby="categoriesDropdown">
                         @foreach ($categories as $category)
@@ -32,14 +32,14 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('announcement.index') }}">Annunci</a>
+                    <a class="nav-link" href="{{ route('announcement.index') }}">{{__('ui.announcements')}}</a>
                 </li>
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Accedi</a>
+                        <a class="nav-link" href="{{ route('login') }}">{{__('ui.login')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Registrati</a>
+                        <a class="nav-link" href="{{ route('register') }}">{{__('ui.register')}}</a>
                     </li>
                 @else
                     <li class="nav-item dropdown">
@@ -53,22 +53,21 @@
                                     @csrf
                                     <div class="d-flex justify-content-center">
 
-                                        <button type="submit" class="w-50 btn btn-danger">Esci</button>
+                                        <button type="submit" class="w-50 btn btn-danger">Logout</button>
                                     </div>
                                 </form>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="btn btn-warning mb-lg-0 mb-2 me-2 margin" href="{{ route('announcement.create') }}">Inserisci
-                            Annuncio
+                        <a class="btn btn-warning mb-lg-0 mb-2 me-2 margin" href="{{ route('announcement.create') }}">{{__('ui.insertAnnouncements')}}
                           </a>
                     </li>
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
                             <a class="btn btn-outline-secondary me-2 mb-lg-0 mb-2 neonText text-white position-relative" aria-current="page"
                                 href="{{ route('revisor.index') }}">
-                                Zona Maestro Jedi
+                                {{__('ui.jediMasterZone')}}
                                
                                 @if (App\Models\Announcement::toBeRevisionedCount()>0)
                                 <span   class="position-absolute top-0 star-100 translate-middle badge rounded-pill bg-warning text-dark ">
@@ -81,6 +80,7 @@
                         </li>
                     @endif
                 @endguest
+                
                 <li>
                     <x-_locale lang="it"/>
                 </li>
@@ -91,9 +91,9 @@
                     <x-_locale lang="en"/>
                 </li>
                 <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-                    <input class="form-control me-2 p-0 margin2" name="searched" type="search" placeholder="Che la ricerca sia con te"
+                    <input class="form-control me-2 p-0 margin2" name="searched" type="search" placeholder="{{__('ui.maysearch')}}"
                         aria-label="Search">
-                    <button class="btn btn-warning margin2" type="submit">Ricerca</button>
+                    <button class="btn btn-warning margin2" type="submit">{{__('ui.search')}}</button>
                 </form>
         </div>
     </div>

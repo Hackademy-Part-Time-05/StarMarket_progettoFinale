@@ -1,4 +1,5 @@
 <x-main>
+    <div class="spazio"></div>
     <div class="container overlay p-5 mt-5">
         <div class="row">
             <div class="col-md-6 col-12">
@@ -43,10 +44,10 @@
                 <div class="card-body">
                     {{-- <h5 class="card-title mt-3">{{$announcement->title}}</h5> --}}
                     <p class="card-text mt-5">{{$announcement->body}}</p>
-                    <p class="card-text">Prezzo: €{{$announcement->price}}</p>
+                    <p class="card-text">{{__('ui.price')}}: €{{$announcement->price}}</p>
                     
-                    <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class=" my-3 btn btn-warning">Categoria: {{$announcement->category->name}}</a>
-                    <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/y')}}  <br>Autore: {{$announcement->user->name}}</p>
+                    <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class=" my-3 btn btn-warning">{{__('ui.category')}}: {{$announcement->category->name}}</a>
+                    <p class="card-footer">{{__('ui.publishedOn')}}: {{$announcement->created_at->format('d/m/y')}}  <br>{{__('ui.author')}}: {{$announcement->user->name}}</p>
                   </div>
             </div>
 

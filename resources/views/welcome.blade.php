@@ -54,10 +54,10 @@
                             <div class="card-body " >
                               <h5 class="card-title title-dimension overflow-hidden" >{{$announcement->title}}</h5>
                                 {{-- <p class="card-text">{{$announcement->body}}</p> --}}
-                                <p class="card-text">Prezzo: €{{$announcement->price}}</p>
-                                <a href="{{route('announcement.show',compact('announcement'))}}" class="btn w-100 btn-warning">Visualizza</a>
-                                <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="btn w-100 my-2 btn-warning">Categoria: {{$announcement->category->name}}</a>
-                                <p class="card-footer bg-white">Pubblicato il: {{$announcement->created_at->format('d/m/y')}} <br>Autore: {{$announcement->user->name}}</p>
+                                <p class="card-text">{{__('ui.price')}}: €{{$announcement->price}}</p>
+                                <a href="{{route('announcement.show',compact('announcement'))}}" class="btn w-100 btn-warning">{{__('ui.details')}}</a>
+                                <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="btn w-100 my-2 btn-warning">{{__('ui.category')}}: {{$announcement->category->name}}</a>
+                                <p class="card-footer bg-white">{{__('ui.publishedOn')}}: {{$announcement->created_at->format('d/m/y')}} <br>{{__('ui.author')}}: {{$announcement->user->name}}</p>
                             </div>
                           </div>
                     </div>
