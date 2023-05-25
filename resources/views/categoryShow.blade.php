@@ -23,7 +23,7 @@
                     @empty
                     <div class="col-12 text-center">
                         <p class="h4">{{__("ui.announcementEmpty")}}</p>
-                        <p class= "h4">{{__('ui.publishOne')}}: <a href="{{route ('announcement.create')}}"class="btn-warning btn shadow"> {{__('ui.newAnnouncementj')}}</a></p>
+                        <p class= "h4">{{__('ui.publishOne')}}: <a href="{{route ('announcement.create')}}"class="btn-warning btn shadow"> {{__('ui.newAnnouncement')}}</a></p>
                     </div>
                     <div class="spazio"></div>
                     <div class="spazio"></div>
