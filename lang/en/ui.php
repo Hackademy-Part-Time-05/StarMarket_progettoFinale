@@ -45,6 +45,7 @@ return[
     'announcementEmpty'=>'There are no announcements for this category',
     'publishOne'=>'Publish one',
     'newAnnouncement'=>'New announcement',
+    'changeLanguage'=>'Change language',
 
 
 

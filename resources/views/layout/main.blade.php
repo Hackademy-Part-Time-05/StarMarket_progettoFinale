@@ -17,7 +17,7 @@
     <title>Presto</title>
 </head>
 <body class="bg-tertiary">
-    <x-navbar/>
+    <x-navbar_2/>
     {{$slot}}
     <x-footer/>
     @livewireScripts

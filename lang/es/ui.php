@@ -45,6 +45,7 @@ return[
     'announcementEmpty'=>'No hay anuncios para esta categoría',
     'publishOne'=>'Publicar uno',
     'newAnnouncement'=>'Nuevo Anuncio',
+    'changeLanguage'=>'Cambiar idioma',
 
 
 
