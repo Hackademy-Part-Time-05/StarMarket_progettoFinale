@@ -46,7 +46,7 @@ return[
     'publishOne'=>'Pubblicane uno',
     'newAnnouncement'=>'Nuovo annuncio',
     'changeLanguage'=>'Cambia lingua',
-    
+    'announcement'=>'L\'annuncio',
     
     
 

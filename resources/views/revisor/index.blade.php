@@ -14,13 +14,13 @@
         </div>
         
     </div>
-    
+     @if ($announcement_to_check)
     <div class="container my-5 overlay card">
         <div class="row">
             
             {{-- carousel e card annuncio da revisionare--}}
-            @if ($announcement_to_check)
-            <h2 class="neonText2 mb-3 display-5">{{$announcement_to_check->title}}</h2>
+           
+            <h2 class="neonText2 m-3 display-5">{{$announcement_to_check->title}}</h2>
             <div class="col-md-6 col-lg-6 col-12">
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     @if ($announcement_to_check->images)
@@ -84,7 +84,7 @@
 
             {{-- annuncio già revisionato --}}
             @if ($announcement)
-            <div class="col-12 col-md-4 col-lg-3 mt-5 card h-100 pb-2 shadow-mrk border border-danger border-5">
+            <div class="col-12 col-md-4 col-lg-3 m-5 card h-100 pb-2 shadow-mrk border border-danger border-5">
                 <div>
                     <p class="fw-bold">
                         {{__('ui.youHaveJust')}}<span class="h4"> @if ($stato=='accettato')
@@ -115,9 +115,9 @@
 <div class="container">
     <div class="row">
         <div class="col-12 overlay">
-            <h3 class=" text-center text-white">{{__('ui.rejectedAnnouncements')}}</h3>
+            <h3 class=" text-center ">{{__('ui.rejectedAnnouncements')}}</h3>
             <table class="w-100">
-                <thead class="text-white">
+                <thead class="">
                     <tr>
                         <th>{{__('ui.title')}}</th>
                         <th>{{__('ui.author')}}</th>
@@ -125,7 +125,7 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody class="text-white">
+                <tbody class="">
                     @foreach ($refusedAnnouncements as $announcement )
                     <tr>
                         <td>{{$announcement->title}}</td>
