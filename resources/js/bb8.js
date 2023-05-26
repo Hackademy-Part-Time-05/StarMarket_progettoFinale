@@ -95,7 +95,7 @@ class App extends React.Component {
 
       React.createElement("div", { className: "config" }, /*#__PURE__*/
       React.createElement("div", { className: "control-wrap" }, /*#__PURE__*/
-      React.createElement("h6", null, "Speed: ", speed), /*#__PURE__*/
+      React.createElement("h6",  { className: "velocity" }, "Velocity: ", speed), /*#__PURE__*/
       React.createElement("input", {
         type: "range",
         min: "0",
@@ -105,7 +105,7 @@ class App extends React.Component {
         onChange: this.handleSpeedChange.bind(this) })), /*#__PURE__*/
 
       React.createElement("div", { className: "control-wrap" }, /*#__PURE__*/
-      React.createElement("p", null, "Acceleration: ", accelMod), /*#__PURE__*/
+      React.createElement("h6", { className: "velocity" }, "Acceleration: ", accelMod), /*#__PURE__*/
       React.createElement("input", {
         type: "range",
         min: "0",

@@ -114,7 +114,7 @@
     @endif    
 <div class="container">
     <div class="row">
-        <div class="col-12 overlay">
+        <div class="col-12 overlay card">
             <h3 class=" text-center ">{{__('ui.rejectedAnnouncements')}}</h3>
             <table class="w-100">
                 <thead class="">

@@ -8,24 +8,24 @@
         @endif
         <x-success/>
     
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+        <div id="carouselExampleAutoplaying" class="carousel slide container" data-bs-ride="carousel">
+            <div class="carousel-inner py-5 ">
               <div class="carousel-item active">
-                <img src="{{asset('media/Joda.jpg')}}" class="d-block w-100 opacity-header" alt="...">
+                <img src="{{asset('media/Joda.jpg')}}" class="d-block w-100 opacity-header card overlay" alt="...">
                 <div class="position-absolute top-50 start-50 text-center translate-middle neonText">
                     <h1 class="display-1 ">Star Market</h1>
                     <p class="display-6 fw-bold ">{{__('ui.header')}}</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{{asset('media/super_mario.jpg')}}" class="d-block w-100 opacity-header" alt="...">
+                <img src="{{asset('media/super_mario.jpg')}}" class="d-block w-100 opacity-header card overlay " alt="...">
                 <div class="position-absolute top-50 start-50 text-center translate-middle neonText">
                     <h1 class="display-1 ">Star Market</h1>
                     <p class="display-6 fw-bold ">{{__('ui.header')}}</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{{asset('media/photo3.jpg')}}" class="d-block w-100 opacity-header" alt="...">
+                <img src="{{asset('media/photo3.jpg')}}" class="d-block w-100 opacity-header card overlay" alt="...">
                 <div class="position-absolute top-50 start-50 text-center translate-middle neonText">
                     <h1 class="display-1">Star Market</h1>
                     <p class="display-6 fw-bold">{{__('ui.header')}}</p>

@@ -7,14 +7,21 @@
     font-weight: 100;
     color: rgb(255, 77, 77);
   } */
-
+  .control-wrap{
+    display: inline !important;
+  }
 
 
   .config {
     position: relative;
+    display: inline;
+    top: -150px;
+    z-index: 0;
   }
 
-
+.velocity{
+  color:#ffc107;
+}
 
 
 
@@ -23,7 +30,7 @@
   position: relative;
   margin-left: -70px;
   width: 140px;
-  bottom: -15%;
+  bottom: -25px;
   left: 0;
 }
 
