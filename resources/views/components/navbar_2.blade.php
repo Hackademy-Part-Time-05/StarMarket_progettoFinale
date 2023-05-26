@@ -1,19 +1,41 @@
+
+
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark border-bottom p-0 sticky-top" id="mainNavbar">
     <div class="container-fluid p-0 mx-4">
         <a class="navbar-brand bounce-top " href="{{ route('welcome') }}"><img class="logo-dim"
                 src="{{ asset('media/logo2.png') }}" alt=""></a>
-        <button class="navbar-toggler text-presto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+
+
+
+  {{-- <button  type="button" id="container"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div id="burger">
+            <div class="bun top"></div>
+            <div class="filling"></div>
+            <div class="bun bottom"></div>
+    </div>
+</button> --}}
+
+
+
+        <a class="bg-dark " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <div id="container">
+                <div id="burger">
+                        <div class="bun top"></div>
+                        <div class="filling"></div>
+                        <div class="bun bottom"></div>
+                </div>
+              </div>
+            </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{ route('welcome') }}"><i class="fa-solid fa-house me-2"></i>Home</a>
                 </li>
 
-                <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle " id="categoriesDropdown" href="#" role="button"
+                <li class="nav-item dropdown green ">
+                    <a class="nav-link dropdown-toggle" id="categoriesDropdown" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{__('ui.categories')}}
                     </a>
