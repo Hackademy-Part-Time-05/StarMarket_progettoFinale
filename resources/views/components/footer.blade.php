@@ -63,31 +63,33 @@
                        
                         
                     </div>
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 ">
                             <h6 class="text-uppercase mb-4 font-weight-bold btn-warning btn">{{__('ui.followUs')}}</h6>
                             <br>
-                            <!-- Facebook -->
-                            <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!"
-                                role="button"><i class="fab fa-facebook-f"></i></a>
+                               <div>
+                                 <!-- Facebook -->
+                                <a class="btn btn-primary btn-floating m-1 icon icons icon-plus" style="background-color: #3b5998" href="#!"
+                                    role="button"><i class="fab fa-facebook-f"></i></a>
 
-                            <!-- Twitter -->
-                            {{-- <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
-                                role="button"><i class="fab fa-twitter"></i></a> --}}
+                                <!-- Twitter -->
+                                {{-- <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
+                                    role="button"><i class="fab fa-twitter"></i></a> --}}
 
-                            <!-- Google -->
-                            {{-- <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!"
-                                role="button"><i class="fab fa-google"></i></a> --}}
+                                <!-- Google -->
+                                {{-- <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!"
+                                    role="button"><i class="fab fa-google"></i></a> --}}
 
-                            <!-- Instagram -->
-                            <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!"
-                                role="button"><i class="fab fa-instagram"></i></a>
+                                <!-- Instagram -->
+                                <a class="btn btn-primary btn-floating m-1 icon" style="background-color: #ac2bac" href="#!"
+                                    role="button"><i class="fab fa-instagram"></i></a>
 
-                            <!-- Linkedin -->
-                            <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!"
-                                role="button"><i class="fab fa-linkedin-in"></i></a>
-                            <!-- Github -->
-                            <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!"
-                                role="button"><i class="fab fa-github"></i></a>
+                                <!-- Linkedin -->
+                                <a class="btn btn-primary btn-floating m-1 icon" style="background-color: #0082ca" href="#!"
+                                    role="button"><i class="fab fa-linkedin-in"></i></a>
+                                <!-- Github -->
+                                <a class="btn btn-primary btn-floating m-1 icon" style="background-color: #333333" href="#!"
+                                    role="button"><i class="fab fa-github"></i></a>
+                               </div>
                         </div>
                     </div>
                     <!--Grid row-->
