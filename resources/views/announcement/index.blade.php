@@ -22,7 +22,7 @@
                     @empty
                     <div class="col-12">
                         <div class="alert alert-warning py-3 shadow">
-                            <p class="lead">Non ci sono annunci per questa ricerca. Prova a passare al lato oscuro</p>
+                            <p class="lead">{{__('ui.announcementsSearch')}}</p>
                         </div>
                     </div>
                     @endforelse

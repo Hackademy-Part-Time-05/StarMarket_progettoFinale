@@ -47,6 +47,7 @@ return[
     'newAnnouncement'=>'New announcement',
     'changeLanguage'=>'Change language',
     'announcement'=>'The announcement',
+    'announcementsSearch'=>'There are no announcements for this search. Try to go to the dark side',
 
 
 

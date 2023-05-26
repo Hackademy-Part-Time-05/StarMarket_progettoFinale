@@ -47,6 +47,7 @@ return[
     'newAnnouncement'=>'Nuovo annuncio',
     'changeLanguage'=>'Cambia lingua',
     'announcement'=>'L\'annuncio',
+    'announcementsSearch'=>'Non ci sono annunci per questa ricerca. Prova a passare al lato oscuro',
     
     
 
