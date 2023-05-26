@@ -147,6 +147,9 @@
 </div>
         
 
-        
+<div id='app'></div>
+<!-- partial -->
+  <script src='https://fb.me/react-15.1.0.min.js'></script>
+<script src='https://fb.me/react-dom-15.1.0.min.js'></script>  
 
 </x-main>
