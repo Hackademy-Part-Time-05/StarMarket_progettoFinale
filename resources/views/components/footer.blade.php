@@ -1,6 +1,6 @@
 
 <div class="spazio"></div>
-<div class="container-fluid mt-5 bg-dark position-absolute">
+<div class="container-fluid mt-5 bg-dark position-relative">
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white">
         <!-- Grid container --> 

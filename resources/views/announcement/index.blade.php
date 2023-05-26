@@ -25,6 +25,9 @@
                             <p class="lead">{{__('ui.announcementsSearch')}}</p>
                         </div>
                     </div>
+
+                    <div class="spazio"></div>
+                    <div class="soldier"></div>
                     @endforelse
                     {{$announcements->appends(Request::except('page'))->links()}}
                 </div>

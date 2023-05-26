@@ -83,7 +83,7 @@
                 @endguest
                 
                 
-                 <form action="{{route('announcements.search')}}" method="GET">
+                 <form class="form" action="{{route('announcements.search')}}" method="GET">
                     <li class="box nav-item mt-3 bg-warning">
                         <input type="search" name="searched" placeholder="{{__('ui.maysearch')}}">
                         <button type="submit" class="btn btn-warning p-0"><i class="fa-solid fa-magnifying-glass text-black"></i></button>
