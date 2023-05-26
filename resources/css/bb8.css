@@ -8,19 +8,20 @@
     color: rgb(255, 77, 77);
   } */
   .control-wrap{
-    display: inline !important;
+    /* display: inline-block !important; */
   }
 
 
   .config {
     position: relative;
-    display: inline;
+    display: inline-block !important;
     top: -150px;
-    z-index: 0;
+   
   }
 
 .velocity{
   color:#ffc107;
+  /* display: inline-block; */
 }
 
 

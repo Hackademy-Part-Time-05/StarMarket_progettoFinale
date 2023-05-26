@@ -93,9 +93,10 @@ class App extends React.Component {
       React.createElement("div", null, /*#__PURE__*/
 
 
-      React.createElement("div", { className: "config" }, /*#__PURE__*/
+      React.createElement("div", { className: "config " }, /*#__PURE__*/
       React.createElement("div", { className: "control-wrap" }, /*#__PURE__*/
-      React.createElement("h6",  { className: "velocity" }, "Velocity: ", speed), /*#__PURE__*/
+      React.createElement("p", { className: "velocity neonText h2 ", }, "Velocity: ", speed), /*#__PURE__*/
+      
       React.createElement("input", {
         type: "range",
         min: "0",
@@ -104,9 +105,10 @@ class App extends React.Component {
         value: speed,
         onChange: this.handleSpeedChange.bind(this) })), /*#__PURE__*/
 
-      React.createElement("div", { className: "control-wrap" }, /*#__PURE__*/
-      React.createElement("h6", { className: "velocity" }, "Acceleration: ", accelMod), /*#__PURE__*/
-      React.createElement("input", {
+      React.createElement("div", { className: "control-wrap " }, /*#__PURE__*/
+      React.createElement("p", { className: "velocity neonText h2 " }, "Acceleration: ", accelMod), /*#__PURE__*/
+        React.createElement("input", {
+        className:"velocity",
         type: "range",
         min: "0",
         max: "3",

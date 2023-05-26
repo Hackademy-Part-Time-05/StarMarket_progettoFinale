@@ -112,9 +112,9 @@
     </div>
     
     @endif    
-<div class="container">
+<div class="container ">
     <div class="row">
-        <div class="col-12 overlay card">
+        <div class="col-12 overlay card ">
             <h3 class=" text-center ">{{__('ui.rejectedAnnouncements')}}</h3>
             <table class="w-100">
                 <thead class="">
@@ -146,8 +146,13 @@
     </div>
 </div>
         
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-1"></div>
+        <div id='app'></div>
+    </div>
+</div>
 
-<div id='app'></div>
 <!-- partial -->
   <script src='https://fb.me/react-15.1.0.min.js'></script>
 <script src='https://fb.me/react-dom-15.1.0.min.js'></script>  
