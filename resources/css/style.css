@@ -249,6 +249,37 @@ font-family: 'Sigmar', cursive; */
         border-bottom: 2 px solid yellow;
   }
 
+  /* BARRA RICERCA DINAMICA */
+  .box{
+        height: 30px;
+        display: flex;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 30px;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+
+  .box:hover input{
+        width: 400px;
+  }
+
+  .box input{
+        width: 0;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition: 0.8s;
+        background: transparent;
+  }
+
+  .box a .fa{
+        color: #000000;
+        font-size: 18px;
+  }
+/* ----------------------------------------- */
+
   .spazio{
         height: 100px;
   }

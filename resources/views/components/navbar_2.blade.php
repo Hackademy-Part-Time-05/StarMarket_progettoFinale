@@ -83,13 +83,17 @@
                 @endguest
                 
                 
-
-                
-                <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+                 <form action="{{route('announcements.search')}}" method="GET">
+                    <li class="box nav-item mt-3 bg-warning">
+                        <input type="search" name="searched" placeholder="{{__('ui.maysearch')}}">
+                        <button type="submit" class="btn btn-warning p-0"><i class="fa-solid fa-magnifying-glass text-black"></i></button>
+                    </li>
+                </form>
+                {{-- <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
                     <input class="form-control me-2 p-0 margin2" name="searched" type="search" placeholder="{{__('ui.maysearch')}}"
                         aria-label="Search">
                     <button class="btn btn-warning margin2" type="submit">{{__('ui.search')}}</button>
-                </form>
+                </form> --}}
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="categoriesDropdown" href="#" role="button"
