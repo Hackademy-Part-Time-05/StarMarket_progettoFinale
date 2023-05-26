@@ -48,13 +48,13 @@
                             aria-expanded="false">
                             {{ auth()->user()->name }}
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu bg-warning">
                             <li>
                                 <form action="{{ route('logout') }}" method="POST">
                                     @csrf
                                     <div class="d-flex justify-content-center">
-
-                                        <button type="submit" class="w-50 btn btn-danger">Logout</button>
+                                        <button type="submit" class="fa-solid fa-person-walking-luggage text-black bg-danger">Bye bye
+                                            </button>
                                     </div>
                                 </form>
                             </li>
