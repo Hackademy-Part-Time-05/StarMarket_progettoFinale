@@ -69,7 +69,7 @@
                                <div>
                                  <!-- Facebook -->
                                 <a class="btn btn-primary btn-floating m-1 icon icons icon-plus" style="background-color: #3b5998" href="#!"
-                                    role="button"><i class="fab fa-facebook-f"></i></a>
+                                    role="button"><i class="fa-brands fa-facebook"></i></i></a>
 
                                 <!-- Twitter -->
                                 {{-- <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
@@ -81,14 +81,14 @@
 
                                 <!-- Instagram -->
                                 <a class="btn btn-primary btn-floating m-1 icon" style="background-color: #ac2bac" href="#!"
-                                    role="button"><i class="fab fa-instagram"></i></a>
+                                    role="button"><i class="fa-brands fa-instagram"></i></a>
 
                                 <!-- Linkedin -->
                                 <a class="btn btn-primary btn-floating m-1 icon" style="background-color: #0082ca" href="#!"
-                                    role="button"><i class="fab fa-linkedin-in"></i></a>
+                                    role="button"><i class="fa-brands fa-linkedin"></i></a>
                                 <!-- Github -->
                                 <a class="btn btn-primary btn-floating m-1 icon" style="background-color: #333333" href="#!"
-                                    role="button"><i class="fab fa-github"></i></a>
+                                    role="button"><i class="fa-brands fa-github"></i></a>
                                </div>
                         </div>
                     </div>
