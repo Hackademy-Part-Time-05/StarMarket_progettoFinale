@@ -29,6 +29,10 @@
                             <div class="carousel-item @if($loop->first)active  @endif ">
                                 <img src="{{Storage::url($image->path)}}" alt="" class="img-fluid p-3 rounded" alt="">
                             </div>
+                                
+
+
+
                         @endforeach
                     </div>
                         
@@ -59,6 +63,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 col-12">
+
                 <div class="card-body">
                     {{-- <h5 class="card-title mt-3">{{$announcement->title}}</h5> --}}
                     <p class="card-text mt-4"><strong>{{$announcement_to_check->body}}</strong></p>
@@ -77,8 +82,39 @@
                             <button class="btn btn-danger shadow d-inline" type="submit">{{__('ui.reject')}}</button>
                         </form></p>
                 </div>
-                  
+                 
             </div>
+            <div class="row"> @foreach ($announcement_to_check->images as $image )
+                
+                    
+
+
+
+            
+                <div class="col-12 col-lg-3 border-end">
+                    <h5 class="tc-accent mt-3">Tags</h5>
+                    <div class="p-2">
+                        @if ($image->labels)
+                        @foreach ($image->labels as $label )
+                            <p class="d-inline">{{$label}}</p>
+                        @endforeach
+                            
+                        @endif</div> 
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <h5 class="tc-accent">Revisione Immagini</h5>
+                        <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                        <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                        <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                        <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                        <p>Contenutto Ammiccante: <span class="{{$image->racy}}"></span></p>
+
+
+                    </div>
+                </div>
+                @endforeach
+            </div> 
             @endif
 
 
