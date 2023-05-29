@@ -62,7 +62,7 @@
                                     <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">{{__("ui.recall")}}</button>
                                 </form>
                         </div>      
-                    @endif
+                        @endif
                     
                   </div>
                   
