@@ -49,7 +49,9 @@
                     
                     <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class=" my-3 btn btn-warning">{{__('ui.category')}}: {{$announcement->category->name}}</a>
                     <p class="card-footer">{{__('ui.publishedOn')}}: {{$announcement->created_at->format('d/m/y')}}  <br>{{__('ui.author')}}: {{$announcement->user->name}}</p>
-                
+                    @guest
+                        
+                    @else
                         @if (Auth::user()->is_revisor)
                         <div class="col-12 col-md-4 col-lg-3 mt-5 card h-100 pb-2 shadow-mrk border border-danger border-5">
                             <div>
@@ -64,7 +66,8 @@
                                 </form>
                         </div>      
                         @endif
-                    
+                        
+                        @endguest
                   </div>
                   
                   
