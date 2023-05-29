@@ -40,6 +40,7 @@
                   </div>
             </div>
 
+    
             <div class="col-md-6 mt-5 col-12">
                 <div class="card-body">
                     {{-- <h5 class="card-title mt-3">{{$announcement->title}}</h5> --}}
@@ -66,7 +67,9 @@
                     
                   </div>
                   
+                  
             </div>
+
 
         </div>
         

@@ -18,6 +18,7 @@
 </head>
 <body class="bg-tertiary">
     <x-navbar_2/>
+    
     {{$slot}}
     <x-footer/>
     @livewireScripts
