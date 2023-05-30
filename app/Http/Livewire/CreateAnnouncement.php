@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Job\RemoveFaces;
+use App\Jobs\RemoveFaces;
 
 class CreateAnnouncement extends Component
 {

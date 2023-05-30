@@ -11,6 +11,7 @@ use Illuminate\Queue\SerializesModels;
 use App\Models\Image;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 use Spatie\Image\Image as SpatieImage;
+use Spatie\Image\Manipulations;
 
 class RemoveFaces implements ShouldQueue
 {
@@ -45,15 +46,15 @@ class RemoveFaces implements ShouldQueue
        $response = $imageAnnotator->faceDetection($image);
        $faces = $response->getFaceAnnotations();
 
-       @foreach ($faces as $face) {
+       foreach ($faces as $face) {
           $vertices = $face->getBoundingPoly()->getVertices();
           
           $bounds = [];
           foreach ($vertices as $vertex){
              $bounds[] = [$vertex->getX(), $vertex->getY()];
           }
-          $w = $bounds[2][0] - $bounds[0][0]:
-          $h = $bounds[2][1] - $bounds[0][1]:
+          $w = $bounds[2][0] - $bounds[0][0];
+          $h = $bounds[2][1] - $bounds[0][1];
 
           $image = SpatieImage::load($srcPath);
 
