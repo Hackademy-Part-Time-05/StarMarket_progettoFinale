@@ -54,8 +54,8 @@
             {{-- @dd(@$image) --}}
             <div class="row">
                 <div class="col-12">
-                    <p>photo preview</p>
-                    <div class="row border border-4 border-info rounded py-4">
+                    <h3 class="neonText2">Photo preview</h3>
+                    <div class="row border border-2 border-warning rounded py-4">
                         @foreach ($images as $key => $image)
                         
                             <div class="col my-3">

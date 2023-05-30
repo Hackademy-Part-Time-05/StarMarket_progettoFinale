@@ -29,10 +29,6 @@
                             <div class="carousel-item @if($loop->first)active  @endif ">
                                 <img src="{{Storage::url($image->path)}}" alt="" class="img-fluid p-3 rounded" alt="">
                             </div>
-                                
-
-
-
                         @endforeach
                     </div>
                         
@@ -67,7 +63,7 @@
                 <div class="card-body">
                     {{-- <h5 class="card-title mt-3">{{$announcement->title}}</h5> --}}
                     <p class="card-text mt-4"><strong>{{$announcement_to_check->body}}</strong></p>
-                    <p class="card-text">{{__('ui.price')}}: €{{$announcement_to_check->price}}</p>
+                    <p class="card-text">{{__('ui.price')}}: € {{$announcement_to_check->price}}</p>
                     
                     <a href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}" class=" my-3 btn btn-warning">{{__('ui.category')}}: {{$announcement_to_check->category->name}}</a>
                     <p class="card-footer">{{__('ui.publishedOn')}}: {{$announcement_to_check->created_at->format('d/m/y')}}  <br>{{__('ui.author')}}: {{$announcement_to_check->user->name}}</p>
@@ -93,6 +89,7 @@
             
                 <div class="col-12 col-lg-3 border-end">
                     <h5 class="tc-accent mt-3">Tags</h5>
+                    <img src="{{Storage::url($image->path)}}" alt="" class="img-fluid p-3 rounded" alt="">
                     <div class="p-2">
                         @if ($image->labels)
                         @foreach ($image->labels as $label )
@@ -122,20 +119,20 @@
             @if ($announcement)
             <div class="col-12 col-md-4 col-lg-3 m-5 card h-100 pb-2 shadow-mrk border border-danger border-5">
                 <div>
-                    <p class="fw-bold">
+                    <p class="m-3 fw-bold">
                         {{__('ui.youHaveJust')}}<span class="h4"> @if ($stato=='accettato')
-                            {{__('ui.accepted')}}
+                            {{__('ui.accepted')}} 
                             @else 
                             {{__('ui.rejected')}}
                             
-                        @endif</span> {{__('ui.thisAnnouncement')}}: <strong class="text-dark"><p class="h4">{{$announcement->title}}</p></strong>
+                        @endif</span> {{__('ui.thisAnnouncement')}}: <strong class="text-dark"><p class="h4 m-3">{{$announcement->title}}</p></strong>
                     </p>
-                    <h6> {{__('ui.wantToCancel')}}</h6>
+                    <h6 class="m-3"> {{__('ui.wantToCancel')}}</h6>
                 </div>
                     <form action="{{route('revisor.cancel_announcement', ['announcement'=>$announcement])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                        <span class="fw-bold">{{__('ui.useTheForce')}}</span>
+                        <span class="fw-bold m-3">{{__('ui.useTheForce')}}</span>
                         <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">{{__("ui.recall")}}</button>
                     </form>
             </div>       
