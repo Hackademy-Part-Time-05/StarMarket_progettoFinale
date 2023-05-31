@@ -31,7 +31,7 @@ return[
     'accepted'=>'aceptado',
     'reject'=>'Rechazar',
     'accept'=>'Aceptar',
-    'youHaveJust'=>'acabas de',
+    'youHaveJust'=>'Acabas de',
     'thisAnnouncement'=>'esto anuncio',
     'wantToCancel'=>'quieres cancelar?',
     'recall'=>'cancelar',
@@ -48,6 +48,13 @@ return[
     'changeLanguage'=>'Cambiar idioma',
     'announcement'=>'El anuncio',
     'announcementsSearch'=>'No hay anuncios para esta búsqueda. Intenta ir al lado oscuro',
+    'delete'=>'Cancelar',
+    'imageReview'=>'Revisión de Imágenes',
+    'adult'=>'Adultos',
+    'medical'=>'Médica',
+    'spoof'=>'Parodia',
+    'violence'=>'Violentia',
+    'racy'=>'Picante',
 
 
 

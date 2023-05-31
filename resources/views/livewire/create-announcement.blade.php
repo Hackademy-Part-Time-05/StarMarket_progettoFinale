@@ -59,8 +59,8 @@
                         @foreach ($images as $key => $image)
                         
                             <div class="col my-3">
-                                <div class="img-preview mx-auto rounded " style="background-image: url({{$image->temporaryUrl()}}); background-position: center; background-size: contain; background-repeat: no-repeat;" ></div>
-                                <button class="btn btn-danger d-block text-center-mt-2 mx-auto" wire:click="removeImage({{ $key }})" type="button">Cancella</button>
+                                <div class="img-preview mx-auto rounded mb-2" style="background-image: url({{$image->temporaryUrl()}}); background-position: center; background-size: contain; background-repeat: no-repeat;" ></div>
+                                <button class="btn btn-danger d-block text-center-mt-2 mx-auto" wire:click="removeImage({{ $key }})" type="button">{{__('ui.delete')}}</button>
                             </div>
                         @endforeach
                     </div>

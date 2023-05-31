@@ -87,25 +87,27 @@
 
 
             
-                <div class="col-12 col-lg-3 border-end">
-                    <h5 class="tc-accent mt-3">Tags</h5>
+                <div class="col-12 col-lg-2 border-end card m-2">
                     <img src="{{Storage::url($image->path)}}" alt="" class="img-fluid p-3 rounded" alt="">
+
+                    <h5 class="tc-accent mt-3">Tags</h5>
+                    
                     <div class="p-2">
                         @if ($image->labels)
                         @foreach ($image->labels as $label )
-                            <p class="d-inline">{{$label}}</p>
+                            <p class="d-inline">#{{$label}}</p>
                         @endforeach
                             
                         @endif</div> 
                 </div>
                 <div class="col-lg-3">
-                    <div class="card-body">
-                        <h5 class="tc-accent">Revisione Immagini</h5>
-                        <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                        <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                        <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                        <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                        <p>Contenutto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                    <div class="card-body text-end">
+                        <h5 class="tc-accent">{{__('ui.imageReview')}}</h5>
+                        <p>{{__('ui.adult')}}: <span class="{{$image->adult}}"></span></p>
+                        <p>{{__('ui.spoof')}}: <span class="{{$image->spoof}}"></span></p>
+                        <p>{{__('ui.medical')}}: <span class="{{$image->medical}}"></span></p>
+                        <p>{{__('ui.violence')}}: <span class="{{$image->violence}}"></span></p>
+                        <p>{{__('ui.racy')}}: <span class="{{$image->racy}}"></span></p>
 
 
                     </div>
@@ -133,7 +135,7 @@
                     @csrf
                     @method('PATCH')
                         <span class="fw-bold m-3">{{__('ui.useTheForce')}}</span>
-                        <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">{{__("ui.recall")}}</button>
+                        <button class="btn btn-dark shadow py-0  neonText2 recall" type="submit">{{__("ui.recall")}}</button>
                     </form>
             </div>       
             @endif

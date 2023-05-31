@@ -24,34 +24,56 @@ class DatabaseSeeder extends Seeder
     }
     public function createCategory(){
         Category::create([
-            'name'=>'Vari'
+            'name'=>'Vari',
+            'Spanish'=>'Varios',
+            'English'=>'Various',
         ]);
         Category::create([
-            'name'=>'Serie TV'
+            'name'=>'Serie TV',
+            'Spanish'=>'Series de TV',
+            'English'=>'TV Series',
         ]);
         Category::create([
-            'name'=>'Giochi da tavolo'
+            'name'=>'Giochi da tavolo',
+            'Spanish'=>'Juegos de mesa',
+            'English'=>'Table games',
         ]);
         Category::create([
-            'name'=>'Action Figure'
+            'name'=>'Action Figures',
+            'Spanish'=>'Figuras de acción',
+            'English'=>'Action Figures',
         ]);
         Category::create([
-            'name'=>'Gadget'
+            'name'=>'Gadget',
+            'Spanish'=>'Artilugio',
+            'English'=>'Gadget',
         ]);
         Category::create([
-            'name'=>'Manga e comics'
+            'name'=>'Manga e comics',
+            'Spanish'=>'Manga y comics',
+            'English'=>'Manga & comics',
         ]);
         Category::create([
-            'name'=>'Funko Pop'
+            'name'=>'Funko Pop',
+            'Spanish'=>'Funko Pop',
+            'English'=>'Funko Pop',
         ]);
         Category::create([
-            'name'=>'Da Collezione'
+            'name'=>'Da Collezione',
+            'Spanish'=>'Coleccionable',
+            'English'=>'Collectible',
         ]);
         Category::create([
-            'name'=>'Introvabili'
+            'name'=>'Introvabili',
+            'Spanish'=>'Inalcanzable',
+            'English'=>'Inobtainable',
+
         ]);
         Category::create([
-            'name'=>'Videogame e Console'
+            'name'=>'Videogame e Console',
+            'Spanish'=>'Videojuego y Consola',
+            'English'=>'Videogames & Console',
+
         ]);
     }
 }

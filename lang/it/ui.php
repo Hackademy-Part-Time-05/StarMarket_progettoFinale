@@ -48,8 +48,13 @@ return[
     'changeLanguage'=>'Cambia lingua',
     'announcement'=>'L\'annuncio',
     'announcementsSearch'=>'Non ci sono annunci per questa ricerca. Prova a passare al lato oscuro',
-    
-    
+    'delete'=>'Cancella',
+    'imageReview'=>'Revisione Immagini',
+    'adult'=>'Adulti',
+    'medical'=>'Medicina',
+    'spoof'=>'Satira',
+    'violence'=>'Violenza',
+    'racy'=>'Contenuto Ammiccante',
 
     
 
