@@ -53,12 +53,12 @@
                         
                     @else
                         @if (Auth::user()->is_revisor)
-                        <div class="col-12 col-md-4 col-lg-3 mt-5 card h-100 pb-2 shadow-mrk border border-danger border-5">
+                        <div class="col-12 col-md-6 col-lg-5 mt-5 card h-100 pb-2 shadow-mrk border border-danger border-5">
                             <div>
                                 
-                                <h6> {{__('ui.wantToCancel')}}</h6>
+                                <h6 class="m-3"> {{__('ui.wantToCancel')}}</h6>
                             </div>
-                                <form action="{{route('revisor.cancel_announcement', ['announcement'=>$announcement])}}" method="POST">
+                                <form  class="m-3" action="{{route('revisor.cancel_announcement', ['announcement'=>$announcement])}}" method="POST">
                                 @csrf
                                 @method('PATCH')
                                     <span class="fw-bold">{{__('ui.useTheForce')}}</span>

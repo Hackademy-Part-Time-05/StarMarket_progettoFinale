@@ -14,7 +14,7 @@
      crossorigin="anonymous" referrerpolicy="no-referrer" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
-    <title>Presto</title>
+    <title>Star Market</title>
 </head>
 <body class="bg-tertiary">
     <x-navbar_2/>

@@ -48,7 +48,13 @@ return[
     'changeLanguage'=>'Change language',
     'announcement'=>'The announcement',
     'announcementsSearch'=>'There are no announcements for this search. Try to go to the dark side',
-
+    'delete'=>'delete',
+    'imageReview'=>'Image Review',
+    'adult'=>'Adult',
+    'medical'=>'Medical',
+    'spoof'=>'Spoof',
+    'violence'=>'Violence',
+    'racy'=>'Racy',
 
 
 

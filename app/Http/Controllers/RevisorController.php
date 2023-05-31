@@ -52,7 +52,7 @@ class RevisorController extends Controller
     public function becomeRevisor()
     {
         Mail::to('admin@starmarket.it')->send(new BecomeRevisor(Auth::user()));
-        return redirect()->back()->with('success','Complimenti! Hai richiesto di entrare in accademia correttamente');
+        return redirect('/')->with('success','Complimenti! Hai richiesto di entrare in accademia correttamente');
     }
     public function makeRevisor(User $user)
     {
