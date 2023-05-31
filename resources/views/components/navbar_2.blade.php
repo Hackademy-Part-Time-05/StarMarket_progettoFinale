@@ -134,13 +134,34 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
                     </a>
                     <ul class="dropdown-menu rounded-0 bg-dark m-0" aria-labelledby="categoriesDropdown">
                         <li class="nav-link nav-item ">
-                            <x-_locale lang="it"/> Italiano
+                            <x-_locale lang="it"/> 
+                            <form action="{{route('set_language_locale', ['lang'=>'it'])}}" class="d-inline px-0 m-0" method="POST">
+   
+                              @csrf
+                                <button class="bg-dark text-white p-0 border-0" type="submit">
+                                   Italiano
+                                </button>
+                                </form>
                         </li>
                         <li class="nav-link nav-item">
-                            <x-_locale lang="es"/> Español
+                            <x-_locale lang="es"/> 
+                            <form action="{{route('set_language_locale', ['lang'=>'es'])}}" class="d-inline px-0 m-0" method="POST">
+   
+                                @csrf
+                                  <button class="bg-dark text-white p-0 border-0" type="submit">
+                                    Español
+                                  </button>
+                                  </form>
                         </li>
                         <li class="nav-link nav-item">
-                            <x-_locale lang="en"/> English
+                            <x-_locale lang="en"/>
+                            <form action="{{route('set_language_locale', ['lang'=>'en'])}}" class="d-inline px-0 m-0" method="POST">
+   
+                                @csrf
+                                  <button class="bg-dark text-white p-0 border-0" type="submit">
+                                     English
+                                  </button>
+                                  </form>
                         </li>
                     </ul>
                 </li>
