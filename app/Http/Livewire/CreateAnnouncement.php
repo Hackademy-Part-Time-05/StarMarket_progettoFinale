@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\File;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Jobs\RemoveFaces;
+use App\Jobs\WaterMarkImage;
 
 class CreateAnnouncement extends Component
 {
@@ -87,6 +88,7 @@ class CreateAnnouncement extends Component
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
 
                 RemoveFaces::withChain([
+                    new WaterMarkImage($newImage->id),
                     new ResizeImage($newImage->path , 400,300),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id),
