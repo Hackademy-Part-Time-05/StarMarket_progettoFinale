@@ -60,9 +60,9 @@ class RemoveFaces implements ShouldQueue
 
           $image->watermark(base_path('public/media/dartvader.png'))
                 ->watermarkPosition('top-left')
-                ->watermarkPadding($bounds[0][0], $bounds[0][1])
-                ->watermarkWidth($w, Manipulations::UNIT_PIXELS)
-                ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
+                ->watermarkPadding($bounds[0][0]-25, $bounds[0][1]-18)
+                ->watermarkWidth($w+50, Manipulations::UNIT_PIXELS)
+                ->watermarkHeight($h+26, Manipulations::UNIT_PIXELS)
                 ->watermarkFit(Manipulations::FIT_STRETCH);
 
           $image->save($srcPath);
