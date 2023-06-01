@@ -2,7 +2,7 @@
     <div class="container overlay card mt-5">
         <div class="row">
             <div class="col-12 mt-3">
-                <h2 class="h2 my-5 fw-bold text-center neonText2">{{__('ui.announcementCategory')}}  {{$category->name}}</h2>
+                <h2 class="h2 my-5 pt-3 fw-bold text-center neonText2">{{__('ui.announcementCategory')}}  {{$category->name}}</h2>
                 <div class="row">
                     @forelse  ( $category->announcements as $announcement)
                    @if ($announcement->is_accepted)
@@ -22,12 +22,13 @@
                     </div> 
                    @endif
                    @empty
-                    <div class="col-12 text-center">
+                   
+                    <div class="col-12 text-center p-5">
                         <p class="h4">{{__("ui.announcementEmpty")}}</p>
                         <p class= "h4">{{__('ui.publishOne')}}: <a href="{{route ('announcement.create')}}"class="btn-warning btn shadow"> {{__('ui.newAnnouncement')}}</a></p>
                     </div>
-                    <div class="spazio"></div>
-                    <div class="spazio"></div>
+                    
+                    
                     
                     <div style="height: 150px"></div>
                     @endforelse

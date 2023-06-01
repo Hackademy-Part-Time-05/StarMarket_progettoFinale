@@ -24,6 +24,7 @@
                         <div class="alert alert-warning py-3 shadow">
                             <p class="lead">{{__('ui.announcementsSearch')}}</p>
                         </div>
+                        <div class="spazio"></div>
                     </div>
 
                     <div class="spazio"></div>

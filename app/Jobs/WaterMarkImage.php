@@ -42,7 +42,7 @@ class WaterMarkImage implements ShouldQueue
  
         $image = SpatieImage::load($srcPath);
  
-           $image->watermark('public/media/logo2.png')
+           $image->watermark(base_path('public/media/logo2.png'))
             ->watermarkWidth(40, Manipulations::UNIT_PERCENT)
             //->watermarkHeight(10, Manipulations::UNIT_PERCENT)
         //    ->watermarkFit(Manipulations::FIT_STRETCH)

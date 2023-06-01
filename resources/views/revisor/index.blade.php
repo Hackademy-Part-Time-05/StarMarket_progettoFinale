@@ -7,7 +7,7 @@
                 <div class="alert alert-success">{{session('message')}}
                 </div>
              @endif
-                <h1 >
+                <h1 class="text-center">
                     {{ $announcement_to_check ? __('ui.revision') : __('ui.notrevision') }}
                 </h1>
             </div>
@@ -57,36 +57,31 @@
                     </button>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-3 col-12">
+                <div class="col-md-6 col-lg-3 col-12">
 
-                <div class="card-body">
-                    {{-- <h5 class="card-title mt-3">{{$announcement->title}}</h5> --}}
-                    <p class="card-text mt-4"><strong>{{$announcement_to_check->body}}</strong></p>
-                    <p class="card-text">{{__('ui.price')}}: € {{$announcement_to_check->price}}</p>
-                    
-                    <a href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}" class=" my-3 btn btn-warning">{{__('ui.category')}}: {{$announcement_to_check->category->name}}</a>
-                    <p class="card-footer">{{__('ui.publishedOn')}}: {{$announcement_to_check->created_at->format('d/m/y')}}  <br>{{__('ui.author')}}: {{$announcement_to_check->user->name}}</p>
-                    <span><form  class="d-inline" action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check],  ['stato'=>'promosso'])}}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button class="btn btn-success shadow d-inline" type="submit">{{__('ui.accept')}}</button>
-                        </form></span>
-                        <p class="d-inline"><form class="d-inline" action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check], ['stato'=>'rifiutato'])}}" method="POST">
+                    <div class="card-body">
+                        {{-- <h5 class="card-title mt-3">{{$announcement->title}}</h5> --}}
+                        <p class="card-text fs-5  mt-4"><strong>{{$announcement_to_check->body}}</strong></p>
+                        <p class="card-text">{{__('ui.price')}}: € {{$announcement_to_check->price}}</p>
+                        
+                        <a href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}" class=" my-3 btn btn-warning">{{__('ui.category')}}: {{$announcement_to_check->category->name}}</a>
+                        <p class="card-footer">{{__('ui.publishedOn')}}: {{$announcement_to_check->created_at->format('d/m/y')}}  <br>{{__('ui.author')}}: {{$announcement_to_check->user->name}}</p>
+                        <span><form  class="d-inline" action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check],  ['stato'=>'promosso'])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-danger shadow d-inline" type="submit">{{__('ui.reject')}}</button>
-                        </form></p>
+                            <button class="btn btn-success shadow d-inline" type="submit">{{__('ui.accept')}}</button>
+                            </form></span>
+                            <p class="d-inline"><form class="d-inline" action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check], ['stato'=>'rifiutato'])}}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button class="btn btn-danger shadow d-inline" type="submit">{{__('ui.reject')}}</button>
+                            </form></p>
+                    </div>
+                     
                 </div>
-                 
             </div>
-            <div class="row"> @foreach ($announcement_to_check->images as $image )
-                
-                    
-
-
-
             
+            <div class="row py-4 m-2"> @foreach ($announcement_to_check->images as $image )
                 <div class="col-12 col-lg-2 border-end card m-2">
                     <img src="{{Storage::url($image->path)}}" alt="" class="img-fluid p-3 rounded" alt="">
 
@@ -148,36 +143,38 @@
     
     @endif    
 <div class="container ">
-    <div class="row">
-        <div class="col-12 overlay card ">
-            <h3 class=" text-center ">{{__('ui.rejectedAnnouncements')}}</h3>
-            <table class="w-100">
-                <thead class="">
-                    <tr>
-                        <th>{{__('ui.title')}}</th>
-                        <th>{{__('ui.author')}}</th>
-                        
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody class="">
-                    @foreach ($refusedAnnouncements as $announcement )
-                    <tr>
-                        <td>{{$announcement->title}}</td>
-                        <td>{{$announcement->user->name}}</td>
-                        <td class="text-center"><form action="{{route('revisor.cancel_announcement', ['announcement'=>$announcement])}}" method="POST">
-                            @csrf
-                            @method('PATCH')
-                            <span class="fw-bold">{{__('ui.useTheForce')}}</span>
-                            <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">{{__('ui.recall')}}</button>
-                        </form></td>
-                    </tr>
-                    
-                    @endforeach
-                </tbody>
-            </table>
+    <div class="row ">
+        <div class="col-12 overlay pb-3 card ">
+                <div class="ms-3">
+                    <h3 class=" text-center pt-3 ">{{__('ui.rejectedAnnouncements')}}</h3>
+                    <table class="w-100">
+                        <thead class="">
+                            <tr>
+                                <th>{{__('ui.title')}}</th>
+                                <th>{{__('ui.author')}}</th>
+                                
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="">
+                            @foreach ($refusedAnnouncements as $announcement )
+                            <tr>
+                                <td>{{$announcement->title}}</td>
+                                <td>{{$announcement->user->name}}</td>
+                                <td class="text-center"><form action="{{route('revisor.cancel_announcement', ['announcement'=>$announcement])}}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <span class="fw-bold">{{__('ui.useTheForce')}}</span>
+                                    <button class="btn btn-dark shadow py-0 neonText2 recall" type="submit">{{__('ui.recall')}}</button>
+                                </form></td>
+                            </tr>
+                            
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
 </div>
         

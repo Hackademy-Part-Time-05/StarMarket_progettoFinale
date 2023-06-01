@@ -20,7 +20,7 @@
                     </div>
                     <!-- Grid column -->
 
-                    <hr class="w-100 clearfix d-md-none" />
+                    
 
                     <!-- Grid column -->
                     {{-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -40,10 +40,10 @@
                     </div> --}}
                     <!-- Grid column -->
 
-                    <hr class="w-100 clearfix d-md-none" />
+                    
 
                     <!-- Grid column -->
-                    <hr class="w-100 clearfix d-md-none" />
+                    
 
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-3 col-xl-2 mx-auto mt-3">
@@ -56,7 +56,7 @@
 
                     <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 ">
-                        <div class="col-9 ms-2 text-center">
+                        <div class="col-9 mx-auto text-center">
                             <h6 class="text-uppercase mb-4 font-weight-bold btn-orange btn mb-0"><a class="btn mb-0 neonText" href="{{route('become.revisor')}}">{{__('ui.workWithUs')}}</a>  </h6>
                             <a href="{{route('become.revisor')}}" class="p-0 m-0 neonText2 fw-bold recall nav-link">{{__('ui.darkSide')}}</a>
                         </div>
