@@ -53,7 +53,7 @@
             @if (!empty($images))
             {{-- @dd(@$image) --}}
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 col-lg-9">
                     <h3 class="neonText2">Photo preview</h3>
                     <div class="row border border-2 border-warning rounded py-4">
                         @foreach ($images as $key => $image)
@@ -64,7 +64,21 @@
                             </div>
                         @endforeach
                     </div>
+                    
+
                 </div>
+
+                {{-- decommentare per scegliere lo smile --}}
+                {{-- <div class="col-3 form-check">
+                        
+                    <h3>Scegli smile</h3>
+                    
+                    <input  type="radio" name="smile" value='dartvader.png' wire:model="smile" id="smile">
+                    <label for="darvader"> Dart Vader</label>
+                    <input  type="radio" name="smile" value='batman.png'  wire:model="smile" id="smile2">
+                    <label for="batman">Batman</label>
+                </div> --}}
+                
             </div>
                 
             @endif

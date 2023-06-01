@@ -28,6 +28,7 @@ class CreateAnnouncement extends Component
     public $image;
     public $form_id;
     public $announcement;
+    public $smile;
 
     protected $rules=[
         'title'=>'required|max:50|min:4',
@@ -36,6 +37,7 @@ class CreateAnnouncement extends Component
         'price'=>'required|numeric',
         'temporary_images.*' => 'image|max:1024',
         'images.*' => 'image|max:1024',
+        // 'smile'=>'required',    //decommentare per scegliere lo smile
         
 
     ];
@@ -49,8 +51,6 @@ class CreateAnnouncement extends Component
         'images.image' => 'L\'immagine dev\'essere un\'immagine',
         'temporary_images.*.max' => 'L\'immagine dev\'essere massimo di 1mb',
         'images.max' => 'L\'immagine dev\'essere massimo di 1mb',
-
-
     ];
 
     public function updatedTemporaryImages(){
@@ -74,11 +74,13 @@ class CreateAnnouncement extends Component
     {
         return view('livewire.create-announcement');
     }
-
+  
     public function submit()
-    {
+    { 
+       
         $this->validate();
-
+      
+        
 
          $this->announcement=Category::find($this->category)->announcements()->create($this->validate());
         if(count($this->images)){
@@ -86,13 +88,17 @@ class CreateAnnouncement extends Component
                 // $this->announcement->images()->create(['path'=>$image->store('images','public')]);
                 $newFileName= "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
-
                 RemoveFaces::withChain([
-                    new WaterMarkImage($newImage->id),
+                    new WaterMarkImage($newImage->id,),
                     new ResizeImage($newImage->path , 400,300),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id),
-                ])->dispatch($newImage->id);
+                    
+                    //commentare per scegliere lo smile
+                    ])->dispatch($newImage->id);
+
+                //decommentare per scegliere lo smile
+                    // ])->dispatch($newImage->id, $this->smile);
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));

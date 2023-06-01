@@ -18,13 +18,16 @@ class RemoveFaces implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     private $announcement_image_id;
+    private $smile;
 
     /**
      * Create a new job instance.
      */
-    public function __construct($announcement_image_id)
+    public function __construct($announcement_image_id, $smile='')
     {
         $this->announcement_image_id = $announcement_image_id;
+        $this->smile = $smile;
+        
     }
 
     /**
@@ -58,6 +61,10 @@ class RemoveFaces implements ShouldQueue
 
           $image = SpatieImage::load($srcPath);
 
+          //decommentare per scegliere lo smile
+         //  $image->watermark(base_path('public/media/' . $this->smile))
+
+          //commentare per scegliere lo smile
           $image->watermark(base_path('public/media/dartvader.png'))
                 ->watermarkPosition('top-left')
                 ->watermarkPadding($bounds[0][0]-25, $bounds[0][1]-18)
