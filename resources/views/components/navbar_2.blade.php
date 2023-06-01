@@ -44,11 +44,25 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                            @if (session('locale')=='it')
-                             <li class="nav-item "><a class="nav-link p-0"
-                                    href="{{ route('categoryShow', compact('category')) }}">{{ $category->name}}</a>
-                            </li>
-                            @elseif (session('locale')=='en')
+                            @switch(session('locale'))
+                                @case('en')
+                                <li class="nav-item "><a class="nav-link p-0"
+                                    href="{{ route('categoryShow', compact('category')) }}">{{ $category->English}}</a>
+                                </li>
+                                @break
+                                @case('es')
+                                <li class="nav-item "><a class="nav-link p-0"
+                                    href="{{ route('categoryShow', compact('category')) }}">{{ $category->Spanish}}</a>
+                                </li>
+                                @break
+                                
+                                @default
+                                <li class="nav-item "><a class="nav-link p-0"
+                                       href="{{ route('categoryShow', compact('category')) }}">{{ $category->name}}</a>
+                               </li>
+                                    
+                            @endswitch 
+                            {{-- @elseif (session('locale')=='en')
                             <li class="nav-item "><a class="nav-link p-0"
                                 href="{{ route('categoryShow', compact('category')) }}">{{ $category->English}}</a>
                         </li>
@@ -56,7 +70,7 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
                             <li class="nav-item "><a class="nav-link p-0"
                                 href="{{ route('categoryShow', compact('category')) }}">{{ $category->Spanish}}</a>
                             </li>
-                            @endif
+                            @endif --}}
                            
                             
                         @endforeach

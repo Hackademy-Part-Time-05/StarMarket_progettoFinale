@@ -42,12 +42,23 @@
 
     
             <div class="col-md-6 mt-5 col-12">
-                <div class="card-body">
+                <div class="card-body fw-bold">
                     {{-- <h5 class="card-title mt-3">{{$announcement->title}}</h5> --}}
                     <p class="card-text mt-5">{{$announcement->body}}</p>
                     <p class="card-text">{{__('ui.price')}}: €{{$announcement->price}}</p>
                     
-                    <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class=" my-3 btn btn-warning">{{__('ui.category')}}: {{$announcement->category->name}}</a>
+                    <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class=" my-3 btn btn-warning">{{__('ui.category')}}: 
+                        @switch(session('locale'))
+                        @case('en')
+                        {{$announcement->category->English}}
+                        @break
+                        @case('es')
+                        {{$announcement->category->Spanish}}
+                        @break
+                        
+                        @default
+                        {{$announcement->category->name}}
+                        @endswitch</a>
                     <p class="card-footer">{{__('ui.publishedOn')}}: {{$announcement->created_at->format('d/m/y')}}  <br>{{__('ui.author')}}: {{$announcement->user->name}}</p>
                     @guest
                         
