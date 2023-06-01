@@ -12,8 +12,20 @@
                               <h5 class="card-title title-dimension overflow-hidden">{{$announcement->title}}</h5>
                               {{-- <p class="card-text">{{$anouncement->body}}</p> --}}
                               <p class="card-text">{{__('ui.price')}}: €{{$announcement->price}}</p>
-                              <a href="{{route('announcement.show',compact('announcement'))}}" class="btn w-100 btn-warning">{{__('ui.details')}}</a>
-                              <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="btn w-100 my-2 btn-warning">{{__('ui.category')}}: {{$announcement->category->name}}</a>
+                              <a href="{{route('announcement.show',compact('announcement'))}}" class="btn w-100 btn-warning">{{__('ui.details')}}</a> 
+                              <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="btn w-100 my-2 btn-warning">{{__('ui.category')}}: 
+                                @switch(session('locale'))
+                                @case('en')
+                                {{$announcement->category->English}}
+                                @break
+                                @case('es')
+                                {{$announcement->category->Spanish}}
+                                @break
+                                
+                                @default
+                                {{$announcement->category->name}}
+                                @endswitch
+                            </a>
                               <p class="card-footer bg-white">{{__('ui.publishedOn')}}: {{$announcement->created_at->format('d/m/y')}} <br>{{__('ui.author')}}: {{$announcement->user->name}}</p>
 
                             </div>

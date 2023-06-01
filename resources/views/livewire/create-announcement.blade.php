@@ -39,8 +39,21 @@
                     <option value="">
                         {{__('ui.categoryChoose')}}
                     </option>
+                    
+                    
+                    
                     @foreach ($categories as $category)
-                        <option value="{{$category->id}}">{{$category->name}}</option>
+                    @switch(session('locale'))
+                                @case('en')
+                                <option value="{{$category->id}}">{{$category->English}}</option>
+                                @break
+                                @case('es')
+                                <option value="{{$category->id}}">{{$category->Spanish}}</option>
+                                @break
+                                
+                                @default
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                @endswitch
                     @endforeach
                        
                     </select>
