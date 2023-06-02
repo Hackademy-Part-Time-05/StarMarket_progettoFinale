@@ -2,7 +2,17 @@
     <div class="container overlay card mt-5">
         <div class="row">
             <div class="col-12 mt-3">
-                <h2 class="h2 my-5 pt-3 fw-bold text-center neonText2">{{__('ui.announcementCategory')}}  {{$category->name}}</h2>
+                <h2 class="h2 my-5 pt-3 fw-bold text-center neonText2">{{__('ui.announcementCategory')}}  @switch(session('locale'))
+                    @case('en')
+                    {{$category->English}}
+                    @break
+                    @case('es')
+                    {{$category->Spanish}}
+                    @break
+                    
+                    @default
+                    {{$category->name}}
+                    @endswitch</h2>
                 <div class="row">
                     @forelse  ( $category->announcements as $announcement)
                    @if ($announcement->is_accepted)
