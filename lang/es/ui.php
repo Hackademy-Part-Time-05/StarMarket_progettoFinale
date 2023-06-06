@@ -55,6 +55,7 @@ return[
     'spoof'=>'Parodia',
     'violence'=>'Violentia',
     'racy'=>'Picante',
+    'smile'=>'Elegir Smile',
 
 
 

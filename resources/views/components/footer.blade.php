@@ -100,7 +100,7 @@
 
         <!-- Copyright -->
         <div class="text-center">
-            © 2023 Le Grupie Di Arnold
+            © 2023 The Five Sith
             
         </div>
         <!-- Copyright -->

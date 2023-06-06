@@ -55,7 +55,7 @@ return[
     'spoof'=>'Spoof',
     'violence'=>'Violence',
     'racy'=>'Racy',
-
+    'smile'=>'Choose Smile',
 
 
 

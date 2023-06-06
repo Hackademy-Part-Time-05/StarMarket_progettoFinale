@@ -37,7 +37,7 @@ class CreateAnnouncement extends Component
         'price'=>'required|numeric',
         'temporary_images.*' => 'image|max:1024',
         'images.*' => 'image|max:1024',
-        // 'smile'=>'required',    //decommentare per scegliere lo smile
+        'smile'=>'required',    //decommentare per scegliere lo smile
         
 
     ];
@@ -95,10 +95,10 @@ class CreateAnnouncement extends Component
                     new GoogleVisionLabelImage($newImage->id),
                     
                     //commentare per scegliere lo smile
-                    ])->dispatch($newImage->id);
+                   // ])->dispatch($newImage->id);
 
                 //decommentare per scegliere lo smile
-                    // ])->dispatch($newImage->id, $this->smile);
+                 ])->dispatch($newImage->id, $this->smile);
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
@@ -112,8 +112,6 @@ class CreateAnnouncement extends Component
        
        
         Auth::user()->announcements()->save($this->announcement);
-        // $this->announcement->user()->associate(Auth::user());
-        // $this->announcement=Category::find($this->category)->announcements()->create($this->validate());
         
         session()->flash('success','Annuncio creato correttamente');
         $this->cleanForm();

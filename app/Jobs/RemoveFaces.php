@@ -62,14 +62,15 @@ class RemoveFaces implements ShouldQueue
           $image = SpatieImage::load($srcPath);
 
           //decommentare per scegliere lo smile
-         //  $image->watermark(base_path('public/media/' . $this->smile))
+         $image->watermark(base_path('public/media/smile/' . $this->smile))
 
           //commentare per scegliere lo smile
-          $image->watermark(base_path('public/media/dartvader.png'))
+          //$image->watermark(base_path('public/media/dartvader.png'))
+
                 ->watermarkPosition('top-left')
-                ->watermarkPadding($bounds[0][0]-25, $bounds[0][1]-18)
-                ->watermarkWidth($w+50, Manipulations::UNIT_PIXELS)
-                ->watermarkHeight($h+26, Manipulations::UNIT_PIXELS)
+                ->watermarkPadding($bounds[0][0]-28, $bounds[0][1]-21)
+                ->watermarkWidth($w+56, Manipulations::UNIT_PIXELS)
+                ->watermarkHeight($h+32, Manipulations::UNIT_PIXELS)
                 ->watermarkFit(Manipulations::FIT_STRETCH);
 
           $image->save($srcPath);

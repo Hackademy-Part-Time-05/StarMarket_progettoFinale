@@ -82,15 +82,22 @@
                 </div>
 
                 {{-- decommentare per scegliere lo smile --}}
-                {{-- <div class="col-3 form-check">
+                <div class="col-3 form-check">
                         
-                    <h3>Scegli smile</h3>
+                    <h3 class="neonText2 recall">{{__('ui.smile')}}</h3>
                     
                     <input  type="radio" name="smile" value='dartvader.png' wire:model="smile" id="smile">
                     <label for="darvader"> Dart Vader</label>
-                    <input  type="radio" name="smile" value='batman.png'  wire:model="smile" id="smile2">
+                    <br>
+                    <input  type="radio" name="batman" value='batman.png'  wire:model="smile" id="smile2">
                     <label for="batman">Batman</label>
-                </div> --}}
+                    <br>
+                    <input  type="radio" name="stormtrooper" value='stormtrooper.png'  wire:model="smile" id="smile3">
+                    <label for="stormtrooper">Stormtrooper</label>
+                    @error('smile') <span class="btn btn-danger">{{$message}}</span>@enderror
+
+                    
+                </div>
                 
             </div>
                 
