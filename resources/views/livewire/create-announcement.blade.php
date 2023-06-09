@@ -86,7 +86,7 @@
                         
                     <h3 class="neonText2 recall">{{__('ui.smile')}}</h3>
                     
-                    <input  type="radio" name="smile" value='dartvader.png' wire:model="smile" id="smile">
+                    <input  type="radio" name="smile" value='dartvader.png' wire:model="smile" id="smile" >
                     <label for="darvader"> Dart Vader</label>
                     <br>
                     <input  type="radio" name="batman" value='batman.png'  wire:model="smile" id="smile2">

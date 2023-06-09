@@ -28,7 +28,7 @@ class CreateAnnouncement extends Component
     public $image;
     public $form_id;
     public $announcement;
-    public $smile;
+    public $smile='dartvader.png';
 
     protected $rules=[
         'title'=>'required|max:50|min:4',
