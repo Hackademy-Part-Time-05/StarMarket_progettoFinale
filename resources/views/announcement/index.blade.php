@@ -27,7 +27,6 @@
                                 @endswitch
                             </a>
                               <p class="card-footer bg-white">{{__('ui.publishedOn')}}: {{$announcement->created_at->format('d/m/y')}} <br>{{__('ui.author')}}: {{$announcement->user->name}}</p>
-
                             </div>
                           </div>
                     </div>
